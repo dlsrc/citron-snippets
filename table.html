@@ -1,0 +1,340 @@
+﻿<!--  Таблицы -->
+
+<!--  DataGrid : DataGrid -->
+<!--  Header -->
+<h3 class="h">{.text }</h3>
+<!-- ~Header -->
+<table class="tab" cellspacing="0">
+	<!--  Caption -->
+	<caption>{.caption }</caption>
+	<!-- ~Caption -->
+	<tr>
+		<!--  ^Thead : Thead -->
+		<!--  Text -->
+		<th class="th">
+			<span class="link">{.text }</span>
+		</th>
+		<!-- ~Text -->
+		<!--  Link -->
+		<th class="th">
+			<a class="link" href="{.uri }" title="{.title }">{.text }</a>
+		</th>
+		<!-- ~Link -->
+		<!-- ~Thead -->
+	</tr>
+	<!--  Row -->
+	<tr>
+		<!-- ^Cell -->
+		<!--  TD -->
+		<td class="cell">
+			<!-- ^Set -->
+			<!--  Text -->
+			<span class="link">{.text }</span>{.br }
+			<!-- ~Text -->
+			<!--  Link -->
+			<a class="link" href="{.uri }">{.text }</a>{.br }
+			<!-- ~Link -->
+			<!--  Url -->
+			<a class="link" href="{.uri }" rel="nofollow">{.text }</a>{.br }
+			<!-- ~Url -->
+			<!-- ~Set -->
+		</td>
+		<!-- ~TD -->
+		<!--  TH -->
+		<th class="cell">
+			<!-- ^Set -->
+			<!--  Text -->
+			<span class="link">{.text }</span>{.br }
+			<!-- ~Text -->
+			<!--  Link -->
+			<a class="link" href="{.uri }">{.text }</a>{.br }
+			<!-- ~Link -->
+			<!--  Url -->
+			<a class="link" href="{.uri }" rel="nofollow">{.text }</a>{.br }
+			<!-- ~Url -->
+			<!-- ~Set -->
+		</th>
+		<!-- ~TH -->
+	</tr>
+	<!-- ~Row -->
+</table>
+<!-- ~DataGrid -->
+
+
+<!--  Table : Table -->
+<!--  Header -->
+<h3 class="h">{.text }</h3>
+<!-- ~Header -->
+<!--  Path -->
+<h4 class="head"><span class="path">{.path }</span>{.node }</h4>
+<!-- ~Path -->
+<!--  FormStart -->
+<form action="{.action }" class="form" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded}">
+	<!--  HiddenName -->
+	<input type="hidden" name="{ %target }" value="{ %id }">
+	<!-- ~HiddenName -->
+	<input type="hidden" name="{.event }" value="{.value }">
+<!-- ~FormStart -->
+<table class="tab" cellspacing="0">
+	<!--  Caption -->
+	<caption>{.caption }</caption>
+	<!-- ~Caption -->
+	<thead>
+		<tr>
+			<!--  ^Thead : Thead -->
+			<!--  Text -->
+			<th class="th">
+				<span class="link">{.text }</span>
+			</th>
+			<!-- ~Text -->
+			<!--  Link -->
+			<th class="th">
+				<a class="link" href="{.uri }" title="{.title }">{.text }</a>
+			</th>
+			<!-- ~Link -->
+			<!--  Input -->
+			<th class="th">
+				<input class="input" id="{.name }" type="{.type = checkbox}" name="{.name }" value="{.value }"{.da }{.ro }>
+			</th>
+			<!-- ~Input -->
+			<!--  Select -->
+			<th class="th">
+				<select class="select" name="{.name }"{.da }{.mu }>
+					<!--  Option -->
+					<option value="{.value }"{.se }>{.text }</option>
+					<!-- ~Option -->
+					<!--  Optgroup -->
+					<optgroup label="{.label }"{.da }>
+						<!--  Option -->
+						<option value="{.value }"{.se }>{.text }</option>
+						<!-- ~Option -->
+					</optgroup>
+					<!-- ~Optgroup -->
+				</select>
+			</th>
+			<!-- ~Select -->
+			<!-- ~Thead -->
+		</tr>
+	</thead>
+	<tbody>
+		<!--  Row -->
+		<tr class="row">
+			<!-- ^Cell -->
+			<!--  DText -->
+			<td class="cell">{.text }</td>
+			<!-- ~DText -->
+			<!--  HText -->
+			<th class="cell">{.text }</th>
+			<!-- ~HText -->
+			<!--  DInput -->
+			<td class="cell">
+				<input class="input" id="{.name }" type="{.type = checkbox}" name="{.name }" value="{.value }"{.da }{.ro }>
+			</td>
+			<!-- ~DInput -->
+			<!--  HInput -->
+			<th class="cell">
+				<input class="input" id="{.name }" type="{.type = checkbox}" name="{.name }" value="{.value }"{.da }{.ro }>
+			</th>
+			<!-- ~HInput -->
+			<!--  DUrl -->
+			<td class="cell">
+				<a class="link" href="{.uri }" rel="nofollow">{.text }</a>
+			</td>
+			<!-- ~DUrl -->
+			<!--  HUrl -->
+			<th class="cell">
+				<a class="link" href="{.uri }" rel="nofollow">{.text }</a>
+			</th>
+			<!-- ~HUrl -->
+			<!--  DLink -->
+			<td class="cell">
+				<a class="link" href="{.uri }">{.text }</a>
+			</td>
+			<!-- ~DLink -->
+			<!--  HLink -->
+			<th class="cell">
+				<a class="link" href="{.uri }">{.text }</a>
+			</th>
+			<!-- ~HLink -->
+			<!--  DTexts -->
+			<td class="cell">
+				<!--  Set -->
+				<span class="link">{.text }</span>{.br }
+				<!-- ~Set -->
+			</td>
+			<!-- ~DTexts -->
+			<!--  HTexts -->
+			<th class="cell">
+				<!--  Set -->
+				<span class="link">{.text }</span>{.br }
+				<!-- ~Set -->
+			</th>
+			<!-- ~HTexts -->
+			<!--  DUrls -->
+			<td class="cell">
+				<!--  Set -->
+				<a class="link" href="{.uri }" rel="nofollow">{.text }</a>{.br }
+				<!-- ~Set -->
+			</td>
+			<!-- ~DUrls -->
+			<!--  HUrls -->
+			<th class="cell">
+				<!--  Set -->
+				<a class="link" href="{.uri }" rel="nofollow">{.text }</a>{.br }
+				<!-- ~Set -->
+			</th>
+			<!-- ~HUrls -->
+			<!--  DLinks -->
+			<td class="cell">
+				<!--  Set -->
+				<a class="link" href="{.uri }">{.text }</a>{.br }
+				<!-- ~Set -->
+			</td>
+			<!-- ~DLinks -->
+			<!--  HLinks -->
+			<th class="cell">
+				<!--  Set -->
+				<a class="link" href="{.uri }">{.text }</a>{.br }
+				<!-- ~Set -->
+			</th>
+			<!-- ~HLinks -->
+			<!-- ~Cell -->
+		</tr>
+		<!-- ~Row -->
+	</tbody>
+</table>
+<!--  FormEnd -->
+<table class="tab" cellspacing="0">
+	<tr>
+		<!--  Select -->
+		<th class="th">
+			<select class="select" name="{.name }"{.da }{.mu }>
+				<!--  Option -->
+				<option value="{.value }"{.se }>{.text }</option>
+				<!-- ~Option -->
+				<!--  Optgroup -->
+				<optgroup label="{.label }"{.da }>
+					<!--  Option -->
+					<option value="{.value }"{.se }>{.text }</option>
+					<!-- ~Option -->
+				</optgroup>
+				<!-- ~Optgroup -->
+			</select>
+		</th>
+		<!-- ~Select -->
+		<th class="th">
+			<input class="submit" type="submit" value="{.submit = Выполнить}">
+		</th>
+	</tr>
+</table>
+</form>
+<script type="text/javascript" charset="utf-8">
+$(function(){var box=$("input#{.box }");var check=$("input.{.check }");box.change(function(){if($(this).prop("checked")) check.prop("checked",true);else check.prop("checked",false);});check.change(function(){if ($("input.{.check }:checked").length == check.length) box.prop("checked",true);else box.prop("checked",false);});});
+</script>
+<!-- ~FormEnd -->
+<!--  Text -->
+<div class="text">{.text }</div>
+<!-- ~Text -->
+<!--  Video -->
+<div class="video">
+	<iframe width="{.width = 640}" height="{.height = 360}" src="https://www.youtube.com/embed/{.code }" frameborder="0" allowfullscreen></iframe>
+</div>
+<!-- ~Video -->
+<!-- ~Table -->
+
+<!--  ReportTable -->
+<!--  FormStart -->
+<form action="{.action }" class="form" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded}">
+<input type="hidden" name="{ %target }" value="{ %id }">
+<input type="hidden" name="{.event }" value="{.value }">
+<!-- ~FormStart -->
+<!--  Grid -->
+<!--  Header -->
+<h4 class="head">{.text }</h4>
+<!-- ~Header -->
+<!--  BoxHeader -->
+<h4 class="head"><input class="checkbox" id="{.box = box}" type="checkbox" name="{.name }"{.da }{.ro }{.ch }>&nbsp;{.text }</h4>
+<!-- ~BoxHeader -->
+<table class="tab" cellspacing="0">
+	<!--  Caption -->
+	<caption>{.caption }</caption>
+	<!-- ~Caption -->
+	<!--  Row -->
+	<tr class="row">
+		<!-- ^Cell -->
+		<!--  DRawText -->
+		<td class="cell">{.text }</td>
+		<!-- ~DRawText -->
+		<!--  HRawText -->
+		<th class="cell">{.text }</th>
+		<!-- ~HRawText -->
+		<!--  DText -->
+		<td class="cell">
+			<span class="text">{.text }</span>
+		</td>
+		<!-- ~DText -->
+		<!--  HText -->
+		<th class="cell">
+			<span class="text">{.text }</span>
+		</th>
+		<!-- ~HText -->
+		<!--  DLink -->
+		<td class="cell">
+			<a class="link" href="{.uri }"{.target }>{.text }</a>
+		</td>
+		<!-- ~DLink -->
+		<!--  HLink -->
+		<th class="cell">
+			<a class="link" href="{.uri }"{.target }>{.text }</a>
+		</th>
+		<!-- ~HLink -->
+		<!--  Button -->
+		<td class="cell">
+			<button type="{.type = button}" class="button" onclick="location.href='{.uri }'">{.text }</button>
+		</td>
+		<!-- ~Button -->
+		<!-- ~Cell -->
+		<!--  Data -->
+		<td class="cell">
+			<span class="text">{.text }</span>
+		</td>
+		<!-- ~Data -->
+		<!--  List -->
+		<td class="cell">
+			<ul class="list">
+				<!--  Link -->
+				<li class="item">
+					<a class="link" href="{.uri }"{.target }>{.text }</a>
+				</li>
+				<!-- ~Link -->
+				<!--  Checkbox -->
+				<li class="item">
+					<input class="checkbox" type="checkbox" name="{.name }"{.da }{.ro }{.ch }>&nbsp;<a class="link" href="{.uri }"{.target }>{.text }</a>
+				</li>
+				<!-- ~Checkbox -->
+			</ul>
+		</td>
+		<!-- ~List -->
+		<!--  Empty -->
+		<td class="cell">&nbsp;</td>
+		<!-- ~Empty -->
+	</tr>
+	<!-- ~Row -->
+	<!--  Submit -->
+	<tr class="row">
+		<th colspan="{.cols = 1}" class="cell">
+			<input class="submit" type="submit" value="{.submit = Выбрать}">
+		</th>
+	</tr>
+	<!-- ~Submit -->
+</table>
+<!-- ~Grid -->
+<!--  FormEnd -->
+</form>
+<script type="text/javascript" charset="utf-8">
+//<!--  Checker -->
+$(function(){var box=$("input#{.box }");var check=$("input.{.check }");box.change(function(){if($(this).prop("checked")) check.prop("checked",true);else check.prop("checked",false);});check.change(function(){if ($("input.{.check }:checked").length == check.length) box.prop("checked",true);else box.prop("checked",false);});});
+//<!-- ~Checker -->
+</script>
+<!-- ~FormEnd -->
+<!-- ~ReportTable -->

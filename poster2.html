@@ -1,0 +1,57 @@
+﻿
+<!-- %BillSticker -->
+<h4 class="sticker">{.text }</h4>
+<!-- ~BillSticker -->
+
+<!-- %BillHeader -->
+<p class="header">
+	<a class="link" href="{.url }">{.text }</a>
+</p>
+<!-- ~BillHeader -->
+
+<!-- %BillPoster -->
+<p class="poster">
+	<a class="link" href="{.url }">{.text }
+	<span>{.detail = подробнее}</span></a>
+</p>
+<!-- ~BillPoster -->
+
+<!-- %BillFooter -->
+<p class="footer">{.text }</p>
+<!-- ~BillFooter -->
+
+<!-- %BillControl -->
+<div class="control">
+	<a class="link" href="{.url }">{.text }</a>
+</div>
+<!-- ~BillControl -->
+
+
+<!--  Bill -->
+<div class="bill">
+	<img class="img" src="{.src }">
+	[ Sticker = BillSticker ]
+	<div class="poster">
+		[ Header = BillHeader ]
+		[ Poster = BillPoster ]
+		[ Footer = BillFooter ]
+	</div>
+	[ Control = BillControl ]
+</div>
+<!-- ~Bill -->
+
+<!--  Posters -->
+<div class="showcase">
+	<div class="bill">
+		<img class="img" src="{.src }">
+		[ Sticker = BillSticker ]
+		<div class="poster">
+			[ Header = BillHeader ]
+			[ Poster = BillPoster ]
+			[ Footer = BillFooter ]
+		</div>
+		[ Control = BillControl ]
+	</div>
+</div>
+<!-- ~Posters -->
+

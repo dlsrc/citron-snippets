@@ -1,0 +1,95 @@
+﻿
+<!--  МЕНЮ -->
+
+<!-- Menu : Menu -->
+<ul class="menu">
+	<!--  Title -->
+	<li class="item">
+		<h4 class="text">{.text }</h4>
+	</li>
+	<!-- ~Title -->
+	<!-- ^Item -->
+	<!--  Link -->
+	<li class="item">
+		<a class="link" href="{.uri }">{.text }</a>{.submenu }
+	</li>
+	<!-- ~Link -->
+	<!--  Active : Link -->
+	<li class="item">
+		<a class="link" href="{.uri }">{.text }</a>{.submenu }
+	</li>
+	<!-- ~Active -->
+	<!--  External : Link -->
+	<li class="item">
+		<a class="link" href="{.uri }" rel="nofollow">{.text }</a>{.submenu }
+	</li>
+	<!-- ~External -->
+	<!--  Text -->
+	<li class="item">
+		<span class="link">{.text }</span>{.submenu }
+	</li>
+	<!-- ~Text -->
+	<!--  TextActive -->
+	<li class="item">
+		<span class="link">{.text }</span>{.submenu }
+	</li>
+	<!-- ~TextActive -->
+	<!--  TextRight -->
+	<li class="item">
+		<span class="link">{.text }</span>{.submenu }
+	</li>
+	<!-- ~TextRight -->
+	<!-- ~Item -->
+</ul>
+<!-- ~Menu -->
+
+<!--  Button : Button -->
+<div class="button">
+	<!--  ButtonDescribe -->
+	<p class="describe">{.text = &nbsp;}</p>
+	<!-- ~ButtonDescribe -->
+	<!-- ^Item -->
+	<!--  Url -->
+	<button type="{.type = button}" class="button" onclick="location.href='{.url }'">{.text }</button>
+	<!-- ~Url -->
+	<!--  Form -->
+	<form  action="{.action = { %gate }}" class="form" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded}">
+		<!--  Hidden -->
+		<input type="hidden" name="{.event = { %location }}" value="{.value = { %id }}">
+		<!-- ~Hidden -->
+		<input  type="submit" class="button" value="{.text }"></form>
+	<!-- ~Form -->
+	<!-- ~Item -->
+	<!--  ButtonComment -->
+	<p class="comment">{.text = &nbsp;}</p>
+	<!-- ~ButtonComment -->
+</div>
+<!-- ~Button -->
+
+<!--  Пейджер -->
+
+<!--  Pager -->
+<ul class="menu">
+	<!-- ^Variator -->
+	<!--  Active -->
+	<li class="item">
+		<span class="link">{.text }</span>
+	</li>
+	<!-- ~Active -->
+	<!--  Text -->
+	<li class="item">
+		<span class="link">{.text }</span>
+	</li>
+	<!-- ~Text -->
+	<!--  Link -->
+	<li class="item">
+		<a class="link" href="{.uri }">{.text }</a>
+	</li>
+	<!-- ~Link -->
+	<!-- ~Variator -->
+</ul>
+<!-- ~Pager -->
+
+<!--  EmbedVideo -->
+<iframe width="{.width = 640}" height="{.height = 360}" src="https://www.youtube.com/embed/{.code }" frameborder="0" allowfullscreen></iframe>
+<!-- ~EmbedVideo -->

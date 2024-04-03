@@ -1,0 +1,174 @@
+﻿<!-- EDITORS TinyMCE -->
+
+<!--  Editor -->
+<script type="text/javascript" src="{ %rel }{ %script }tinymce/tinymce.min.js" charset="utf-8"></script>
+<!-- ~Editor -->
+
+
+<!--  EditorReportTest --><script type="text/javascript" charset="utf-8">
+tinymce.init({
+	selector: '{.selector = .area}',
+	language: 'ru',
+	menubar: true,
+	theme: 'modern',
+	/*convert_urls: false,*/
+	relative_urls: false,
+	/*width: 300,*/
+	height: 480,
+	plugins: [
+		"advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+		"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+		"save table contextmenu directionality emoticons template paste textcolor"
+	],
+	//<!--  ImageList -->
+	image_list: [
+		//<!--  ImageSrc  -->
+		{title: '{.title }', value: '{.path }'}{.comma = ,}
+		//<!-- ~ImageSrc  -->
+	],
+	//<!-- ~ImageList -->
+	image_advtab: true,
+	paste_as_text: true,
+	visual_table_class: 'intext',
+	content_css: '/{ %style }editor.css',
+	toolbar: "fullscreen styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | forecolor backcolor",
+	forced_root_block: 'p'
+});
+</script>
+<!-- ~EditorReportTest -->
+
+<!--  EditorClassicTest --><script type="text/javascript" charset="utf-8">
+tinymce.init({
+	selector: '{.selector = .area}',
+	language: 'ru',
+	height: 480,
+	relative_urls: false,
+	plugins: [
+		"advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+		"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+		"table contextmenu directionality emoticons template textcolor paste fullpage textcolor"
+	],
+	//<!--  ImageList -->
+	image_list: [
+		//<!--  ImageSrc  -->
+		{title: '{.title }', value: '{.path }'}{.comma = ,}
+		//<!-- ~ImageSrc  -->
+	],
+	//<!-- ~ImageList -->
+	toolbar1: "newdocument print fullscreen | undo redo | cut copy paste searchreplace | bold italic underline strikethrough | bullist numlist | outdent indent blockquote | table",
+	toolbar2: "link unlink anchor image media | forecolor backcolor | subscript superscript | charmap emoticons | ltr rtl | visualchars visualblocks nonbreaking | inserttime preview",
+	toolbar3: "alignleft aligncenter alignright alignjustify | styleselect | formatselect | fontselect | fontsizeselect | hr removeformat code",
+	menubar: false,
+	image_advtab: true,
+	paste_as_text: true,
+	visual_table_class: 'intext',
+	content_css: '/{ %style }editor.css',
+	toolbar_items_size: 'small',
+	fontsize_formats: "10px 11px 12px 14px 16px 18px 24px 36px 48px",
+	forced_root_block: 'p'
+});</script>
+<!-- ~EditorClassicTest -->
+
+
+<!--  EditorNote --><script type="text/javascript" charset="utf-8">
+tinymce.init({
+	selector: '{.selector = .area}',
+	language: 'ru',
+	menubar: false,
+	relative_urls: false,
+	height: 240,
+	plugins: ['lists paste'],
+	paste_as_text: true,
+	visual_table_class: 'intext',
+	content_css: '/{ %style }editor.css',
+	toolbar: "bold italic underline | bullist numlist outdent indent | alignleft aligncenter alignright alignjustify",
+	forced_root_block: 'p'
+});
+</script>
+<!-- ~EditorNote -->
+
+<!--  EditorPromo --><script type="text/javascript" charset="utf-8">
+tinymce.init({
+	selector: '{.selector = .area}',
+	language: 'ru',
+	menubar: false,
+	relative_urls: false,
+	height: 360,
+	plugins: ['link image lists hr code nonbreaking paste textcolor fullscreen'],
+	//<!--  ImageList -->
+	image_list: [
+		//<!--  ImageSrc  -->
+		{title: '{.title }', value: '{.path }'}{.comma = ,}
+		//<!-- ~ImageSrc  -->
+	],
+	//<!-- ~ImageList -->
+	image_advtab: true,
+	paste_as_text: true,
+	visual_table_class: 'intext',
+	content_css: '/{ %style }editor.css',
+	toolbar: "fullscreen styleselect | bold italic underline | bullist numlist outdent indent | alignleft aligncenter alignright alignjustify | link image | forecolor backcolor | code",
+	forced_root_block: 'p'
+});
+</script>
+<!-- ~EditorPromo -->
+
+<!--  EditorReport --><script type="text/javascript" charset="utf-8">
+tinymce.init({
+	selector: '{.selector = .area}',
+	language: 'ru',
+	menubar: true,
+	relative_urls: false,
+	height: 480,
+	plugins: [
+		"advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+		"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+		"save table contextmenu directionality emoticons template paste textcolor"
+	],
+	//<!--  ImageList -->
+	image_list: [
+		//<!--  ImageSrc  -->
+		{title: '{.title }', value: '{.path }'}{.comma = ,}
+		//<!-- ~ImageSrc  -->
+	],
+	//<!-- ~ImageList -->
+	image_advtab: true,
+	paste_as_text: true,
+	visual_table_class: 'intext',
+	content_css: '/{ %style }editor.css',
+	toolbar: "fullscreen styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | forecolor backcolor | code",
+	forced_root_block: 'p'
+});
+</script>
+<!-- ~EditorReport -->
+
+<!--  EditorClassic --><script type="text/javascript" charset="utf-8">
+tinymce.init({
+	selector: '{.selector = .area}',
+	language: 'ru',
+	height: 480,
+	relative_urls: false,
+	plugins: [
+		"advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+		"searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+		"table contextmenu directionality emoticons template textcolor paste"
+	],
+	//<!--  ImageList -->
+	image_list: [
+		//<!--  ImageSrc  -->
+		{title: '{.title }', value: '{.path }'}{.comma = ,}
+		//<!-- ~ImageSrc  -->
+	],
+	//<!-- ~ImageList -->
+	toolbar1: "newdocument print fullscreen | cut copy paste searchreplace | bold italic underline strikethrough | bullist numlist | outdent indent blockquote | hr removeformat code",
+	toolbar2: "link unlink anchor image media | forecolor backcolor | subscript superscript | charmap emoticons | ltr rtl | visualchars visualblocks nonbreaking | inserttime preview | table",
+	toolbar3: "alignleft aligncenter alignright alignjustify | undo redo | styleselect | formatselect | fontselect | fontsizeselect",
+	menubar: false,
+	image_advtab: true,
+	paste_as_text: true,
+	visual_table_class: 'intext',
+	content_css: '/{ %style }editor.css',
+	toolbar_items_size: 'small',
+	fontsize_formats: "10px 11px 12px 14px 16px 18px 20px 24px 28px 32px 36px",
+	forced_root_block: 'p'
+});</script>
+<!-- ~EditorClassic -->

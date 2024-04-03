@@ -1,0 +1,168 @@
+
+<!--  Plugin -->
+{.html }
+<!-- ~Plugin -->
+
+
+<!--  VKOpenAPI -->
+<script src="https://vk.com/js/api/openapi.js?136" type="text/javascript"></script>
+<!-- ~VKOpenAPI -->
+
+<!--  VKInitAPI -->
+<script type="text/javascript">
+VK.init({apiId:{.api_id }});
+</script>
+<!-- ~VKInitAPI -->
+
+<!--  VKGroup -->
+<div id="{.widget = vk_group}"></div>
+<!-- ~VKGroup -->
+
+<!--  VKGroupInit -->
+<script type="text/javascript">
+VK.Widgets.Group("{.widget = vk_group}", {mode: {.mode = 0}, wide: {.wide = 0}, width: "{.width = 300}", height: "{.height = 300}", color1: "{.color1 = FFFFFF}", color2: "{.color2 = 000000}", color3: "{.color3 = 5E81A8}"}, {.group_id });
+</script>
+<!-- ~VKGroupInit -->
+
+<!--  VKAuth -->
+<div id="{.widget = vk_auth}"></div>
+<!-- ~VKAuth -->
+
+<!--  VKAuthInit -->
+<script type="text/javascript">
+VK.Widgets.Auth("{.widget = vk_auth}", {width: "{.width = 300}", authUrl: "{.url }"});
+</script>
+<!-- ~VKAuthInit -->
+
+<!--  COUNTERS -->
+
+
+<!--  YandexCounter -->
+<script type="text/javascript" charset="utf-8">
+(function (d,w,c) {
+	(w[c]=w[c] || []).push(function() {
+		try {
+			w.yaCounter{.metrika_id } = new Ya.Metrika({id:{.metrika_id },{.metrika_value }});
+		} catch(e) { }
+	});
+	var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {n.parentNode.insertBefore(s,n);};
+	s.type = "text/javascript";
+	s.async = true;
+	s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+	if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded",f);} else {f();}
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/{.metrika_id }" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<!-- ~YandexCounter -->
+
+<!--  YandexInformer -->
+<a href="https://metrika.yandex.ru/stat/?id={.metrika_id }&amp;from=informer" target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/{.metrika_id }/{.inf_type = 3}_{.inf_arrow = 0}_{.inf_bg1 = FFFFFF}FF_{.inf_bg2 = FFFFFF}FF_{.inf_text = 0}_pageviews" style="width:{.width = 88}px; height:{.height = 31}px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика" <!--  Extra -->onclick="try{Ya.Metrika.informer({i:this,id:{.metrika_id },type:0,lang:'ru'});return false}catch(e){}" <!-- ~Extra -->/></a>
+<!-- ~YandexInformer -->
+
+
+<!--  LiveInternetCounter --><script type="text/javascript"><!--
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+
+";"+Math.random();//--></script>
+<!-- ~LiveInternetCounter -->
+
+<!--  LiveInternetInformer  --><a href="https://www.liveinternet.ru/click"
+target="_blank" rel="nofollow"><img src="//counter.yadro.ru/logo?{.logo = 17.6}"
+title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
+alt="" border="0" width="{.w = 88}" height="{.h = 31}"/></a>
+<!-- ~LiveInternetInformer  -->
+
+
+<!--  LiveInternet -->
+<script type="text/javascript"><!--
+document.write("<a rel='nofollow' href='https://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t17.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script>
+<!-- ~LiveInternet -->
+
+
+<!--  RamblerCounterOld -->
+<script id="top100Counter" type="text/javascript" src="https://counter.rambler.ru/top100.jcn?{.topid }"></script>
+<noscript>
+<a href="https://top100.rambler.ru/navi/{.topid }/" rel="nofollow"><img src="https://counter.rambler.ru/top100.cnt?{.topid }" alt="Rambler's Top100" border="0"></a>
+</noscript>
+<!-- ~RamblerCounterOld -->
+
+<!--  RamblerCounter -->
+<span id="top100_widget"></span>
+<script>
+    (function (w, d, c) {
+    (w[c] = w[c] || []).push(function() {
+        var options = {
+            project: {.topid },
+            element: 'top100_widget',
+        };
+        try {
+            w.top100Counter = new top100(options);
+        } catch(e) { }
+    });
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src =
+    (d.location.protocol == "https:" ? "https:" : "http:") +
+    "//st.top100.ru/top100/top100.js";
+
+    if (w.opera == "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(window, document, "_top100q");
+</script>
+<noscript>
+  <img src="//counter.rambler.ru/top100.cnt?pid={.topid }" alt="Топ-100" />
+</noscript>
+<!-- ~RamblerCounter -->
+
+<!--  GoogleAnalytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={.gam_id }"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  //<!-- ^GoogleTag -->
+  //<!--  DefaultTag -->
+  gtag('config', '{.gam_id }');
+  //<!-- ~DefaultTag -->
+  //<!--  NoSendTag -->
+  gtag('config', '{.gam_id }', { 'send_page_view': false });
+  //<!-- ~NoSendTag -->
+  //<!-- ~GoogleTag -->
+</script>
+<!-- ~GoogleAnalytics -->
+
+<!--  GoogleAnalyticsAPI -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={.gam_id }"></script>
+<!-- ~GoogleAnalyticsAPI -->
+
+<!--  GoogleAnalyticsConfig -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  //<!-- ^GoogleTag -->
+  //<!--  DefaultTag -->
+  gtag('config', '{.gam_id }');
+  //<!-- ~DefaultTag -->
+  //<!--  NoSendTag -->
+  gtag('config', '{.gam_id }', { 'send_page_view': false });
+  //<!-- ~NoSendTag -->
+  //<!-- ~GoogleTag -->
+</script>
+<!-- ~GoogleAnalyticsConfig -->

@@ -1,0 +1,42 @@
+﻿
+<!--  МЕНЮ -->
+
+<!-- % MenuItemLink : MenuItemLink -->
+<li class="item"><a class="link" href="{.uri }">{.text }</a>{.submenu }</li>
+<!-- ~MenuItemLink -->
+
+<!-- % MenuItemText : MenuItemText -->
+<li class="item"><span class="link">{.text }</span>{.submenu }</li>
+<!-- ~MenuItemText -->
+
+<!--  Menu : Menu -->
+<ul class="menu">
+	<!--  Title -->
+	<li class="item"><h4 class="text">{.text }</h4></li>
+	<!-- ~Title -->
+	<!-- ^Item -->
+	[ Text : ItemText = MenuItemText ]
+	[ Link : ItemLink = MenuItemLink ]
+	[ TextActive = Menu.Item.Text ]
+	[ TextRight  = .Text ]
+	[ Active     = _self.Item.Link ]
+	[ External   = .Link { link: rel = nofollow }]
+	<!-- ~Item -->
+</ul>
+<!-- ~Menu -->
+
+<!-- Пейджер -->
+
+<!--  Pager -->
+<ul class="menu">
+	<!-- ^Variator -->
+	[ Link : = MenuItemLink { -submenu }]
+	[ Text : = MenuItemText { submenu = "" }]
+	[ Active = .Text ]
+	<!-- ~Variator -->
+</ul>
+<!-- ~Pager -->
+
+<!--  EmbedVideo -->
+<iframe width="{.width = 640}" height="{.height = 360}" src="https://www.youtube.com/embed/{.code }" frameborder="0" allowfullscreen></iframe>
+<!-- ~EmbedVideo -->

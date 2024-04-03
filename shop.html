@@ -1,0 +1,288 @@
+
+<!--  ShoppingCartInformer -->
+<div class="link"><!-- ActiveCart -->
+	<a class="cart" href="{.url }"><i class="glyphicon glyphicon-{.icon = shopping-cart}"></i>&nbsp;{.text = cart}</a>
+	<!-- ~ActiveCart --><!-- PassiveCart -->
+	<span class="cart"><i class="glyphicon glyphicon-{.icon = shopping-cart}"></i>&nbsp;{.text = cart}</span>
+	<!-- ~PassiveCart -->
+</div>
+<!-- ~ShoppingCartInformer -->
+
+
+<!--  ShoppingCart -->
+<h3 class="header">{.header }</h3><!--  Header -->
+<div class="cart-row cart-control">
+	<div class="cart-data">
+		<a class="apart" href="{.url_hide }" title="{.title_hide }">{.text_hide }</a>
+		<a class="trash" href="{.url_drop }" title="{.title_drop }">{.text_drop }</a>
+	</div><!--  CouponForm -->
+	<div class="cart-data">
+		<form class="coupon" action="{.action }" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded}"><input placeholder="{.placeholder = Добавить Купон}" type="text" name="{.name }" id="{.name }" value="{.value }"><input type="submit" value="{.submit = ДА}"></form>
+	</div>
+	<!-- ~CouponForm -->
+</div>
+<!-- ~Header --><!--  Body -->
+<div class="cart-row">
+	<div class="cart-data cart-data-1">
+		<a class="img" href="{.src }"><img class="thumb" src="{.thumb }"></a>
+		<a class="hide" href="{.url_hide }" title="{.title_hide }">{.text_hide }</a>
+		<a class="drop" href="{.url_drop }" title="{.title_drop }">{.text_drop }</a>
+	</div>
+	<div class="cart-data cart-data-2">
+		<a class="merchandise" href="{.url }">{.text }</a><!--  Color -->
+		<div class="color">
+			<span class="property">{.name }</span>
+			<a class="variant" href="{.url }" style="background-color: {.color };"></a>
+			<span class="color-name">{.text }</span>
+		</div>
+		<!-- ~Color -->
+	</div>
+	<div class="cart-data cart-data-3">
+		<span class="available">{.available }</span>
+		<span class="order">{.order }</span>
+		<div class="forming"><!--  PriceForm -->
+			<div class="price">{.price }&nbsp;x&nbsp;</div>
+			<form class="count" action="{.action }" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded}"><input type="text" name="{.name }" value="{.count = 1}" size="3" maxlength="3"{.da }><input type="submit" value="{.submit = ДА}"{.da }><input type="hidden" name="{.event }" value="{.value }"></form>
+			<!-- ~PriceForm -->
+			<div class="sum">{.sum }</div>
+		</div><!--  Discount -->
+		<div class="discount">
+			<div class="percent">{.percent }</div>
+			<div class="newsum">{.sum }</div>
+		</div>
+		<!-- ~Discount -->
+	</div>
+	<div class="cart-data cart-data-4">{.comment = &nbsp;}</div>
+</div>
+<!-- ~Body --><!--  Footer -->
+<div class="cart-row">
+	<div class="cart-data">{.delivery }</div>
+	<div class="cart-data">
+		<a class="buying" href="{.url }">{.text = Оформить}</a>
+	</div>
+	<div class="cart-data">
+		<div class="total">{.total = Итого:}</div>
+		<div class="full">{.price }</div>
+	</div>
+	<div class="cart-data">{.comment = &nbsp;}</div>
+</div>
+<!-- ~Footer --><!-- ~ShoppingCart -->
+
+<!--  Purchases -->
+<h3 class="header">{.header }</h3><!--  Purchase -->
+<div class="cart-row">
+	<div class="cart-data">
+		<p class="center">{.call }</p>
+		<p class="center">{.changed }</p>
+		<p class="center">{.recipient }</p>
+	</div>
+	<div class="cart-data">
+		<p class="center">{.address }</p>
+	</div>
+	<div class="cart-data">
+		<p class="center">{.price }</p>
+		<p class="center">{.count }</p>
+	</div>
+	<div class="cart-data">
+		<p class="center">{.offer }</p>
+		<p class="center">{.dispatch }</p>
+	</div>
+</div>
+<!-- ~Purchase --><!-- ~Purchases -->
+
+
+<!--  OrderCall -->
+<h3 class="header">{.header }</h3>
+<div class="cart-row cart-control">
+	<div class="cart-data"><p class="center">{.buyer }</p><p class="center">{.email }</p></div>
+	<div class="cart-data"><p class="center">{.address }</p></div>
+	<div class="cart-data"><p class="center">{.recipient }</p></div>
+	<div class="cart-data"><p class="center">{.dispatch }</p></div>
+</div>
+<!--  Body -->
+<div class="cart-row">
+	<div class="cart-data cart-data-1">
+		<a class="img" href="{.src }"><img class="thumb" src="{.thumb }"></a>
+	</div>
+	<div class="cart-data cart-data-2">
+		<a class="merchandise" href="{.url }">{.text }</a><!--  Color -->
+		<div class="color">
+			<span class="property">{.name }</span>
+			<a class="variant" href="{.url }" style="background-color: {.color };"></a>
+			<span class="color-name">{.text }</span>
+		</div>
+		<!-- ~Color -->
+	</div>
+	<div class="cart-data cart-data-3">
+		<span class="available">{.available }</span>
+		<span class="order">{.order }</span>
+		<div class="forming">
+			<div class="price bold">{.price }&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;{.count }</div>
+			<div class="sum">{.sum }</div>
+		</div><!--  Discount -->
+		<div class="discount">
+			<div class="percent">{.percent }</div>
+			<div class="newsum">{.sum }</div>
+		</div>
+		<!-- ~Discount -->
+	</div>
+	<div class="cart-data cart-data-4">{.comment = &nbsp;}</div>
+</div>
+<!-- ~Body --><!-- ~OrderCall -->
+
+
+<!--  PaymentOptions -->
+<h3 class="header">{.header }</h3>
+<!--  Body -->
+<div class="cart-row">
+	<div class="cart-data">
+		<p class="center bold">{.payment }</p>
+		<p class="center">{.comment }</p>
+	</div>
+	<div class="cart-data cart-data-3">
+		<span class="available">{.delivery }</span>
+		<span class="order">{.time }</span>
+		<div class="forming">
+			<div class="price bold">{.price }</div>
+			<div class="sum">{.sum }</div>
+		</div>
+	</div>
+	<div class="cart-data">
+		<div class="total">{.total }</div>
+		<div class="full">{.count }</div>
+	</div>
+	<div class="cart-data"><a class="buying" href="{.url }">{.text = Оплатить}</a></div>
+</div>
+<!-- ~Body --><!-- ~PaymentOptions -->
+
+
+<!--  Card -->
+<div class="showcase">
+	<div class="card"><!-- CardImage -->
+		<img class="img" src="{.src }" alt="{.alt }">
+		<a class="photo" href="{.url }"><i class="glyphicon glyphicon-{.icon = zoom-in}"></i></a>
+		<!-- StickerReal --><a href="{.url }" class="sticker">{.text }</a><!-- ~StickerReal -->
+		<!-- Sticker --><span class="sticker">{.text }</span><!-- ~Sticker -->
+		<!-- Control --><div class="control"><!-- Item -->
+			<a class="link" href="{.url }">{.text }</a>
+			<!-- ~Item -->
+		</div><!-- ~Control -->
+		<!-- ~CardImage --><!-- CardPrice -->
+		<!-- ActivePrice --><a class="price" href="{.url }"><i class="glyphicon glyphicon-{.icon_price = rub}"></i>&nbsp;{.price }</a><!-- ~ActivePrice -->
+		<!-- PassivePrice --><span class="price"><i class="glyphicon glyphicon-{.icon_price = rub}"></i>&nbsp;{.price }</span><!-- ~PassivePrice -->
+		<!-- ActiveCart --><a class="cart" href="{.url }"><i class="glyphicon glyphicon-{.icon = shopping-cart}"></i>&nbsp;{.cart = в корзину}</a><!-- ~ActiveCart -->
+		<!-- PassiveCart --><span class="cart"><i class="glyphicon glyphicon-{.icon = stop}"></i>&nbsp;{.cart = продан}</span><!-- ~PassiveCart -->
+		<span class="pack">{.pack }</span>
+		<span class="available">{.available }</span>
+		<div class="properties"><!-- Color -->
+			<span class="property">{.name }:</span>
+			<a class="color" href="{.url }" style="background-color:{.color }"></a>
+			<a class="variant" href="{.url }">{.text }</a><br>
+			<!-- ~Color --><!-- Property -->
+			<span class="property">{.name }:</span>
+			<a class="variant" href="{.url }">{.text }</a><br>
+			<!-- ~Property --><!-- Option -->
+			<span class="property">{.name }:</span>
+			<span class="variant">{.text }</span><br>
+			<!-- ~Option -->
+		</div>
+		<!-- ~CardPrice --><!-- CardFeature -->
+		<div class="features"><!-- Property -->
+			<span class="feature">{.name }:</span>
+			<a class="variant" href="{.url }">{.text }</a><br>
+			<!-- ~Property -->
+		</div>
+		<!-- ~CardFeature -->
+	</div>
+</div>
+<!-- ~Card -->
+
+
+<!-- Assortment --><!-- Color -->
+<div class="showcase">
+	<div class="catalog">
+		<img class="img" src="{.src }" alt="{.alt }">
+		<a class="photo" href="{.url }"><i class="glyphicon glyphicon-{.icon_img = search}"></i></a>
+		<!-- Sticker --><a href="{.url }" class="sticker">{.text }</a><!-- ~Sticker -->
+		<div class="price-list">
+			<a class="price" href="{.url }"><i class="glyphicon glyphicon-{.icon_price = rub}"></i>&nbsp;{.price }</a>
+			<a class="cart" href="{.url_cart }"><i class="glyphicon glyphicon-{.icon = shopping-cart}"></i>&nbsp;{.cart = в корзину}</a>
+			<p class="merchandise"><a class="link" href="{.url }">{.text }</a></p>
+		</div>
+		<div class="properties"><!-- AssortmentSizes -->
+			<div class="assortment-size">
+				<span class="assortment-property">{.name }:</span><!-- AssortmentSize -->
+				<a class="size" href="{.url }">{.text }</a>
+				<!-- ~AssortmentSize -->
+			</div>
+			<!-- ~AssortmentSizes --><!-- AssortmentColors -->
+			<div class="assortment-colors">
+				<span class="assortment-property">{.name }:</span><!-- AssortmentColor -->
+				<a class="color" href="{.url }" style="background-color:{.color }"></a>
+				<a class="variant" href="{.url }">{.text }</a><br>
+				<!-- ~AssortmentColor -->
+			</div>
+			<!-- ~AssortmentColors -->
+		</div>
+	</div>
+</div>
+<!-- ~Color --><!-- AssortmentFeature -->
+<div class="showcase">
+	<div class="card">
+		<div class="features"><!-- Property -->
+			<span class="feature">{.name }:</span>
+			<a class="variant" href="{.url }">{.text }</a><br>
+			<!-- ~Property -->
+		</div>
+	</div>
+</div>
+<!-- ~AssortmentFeature --><!-- ~Assortment -->
+
+
+<!--  Showcase -->
+<div class="showcase">
+	<div class="catalog">
+		<img class="img" src="{.src }" alt="{.alt }">
+		<a class="photo" href="{.url }"><i class="glyphicon glyphicon-{.icon_img = search }"></i></a>
+		<!-- Sticker --><a href="{.url }" class="sticker">{.text }</a><!-- ~Sticker -->
+		<div class="price-list">
+			<a class="price" href="{.url }"><i class="glyphicon glyphicon-{.icon_price = rub }"></i>&nbsp;{.price }</a>
+			<a class="cart" href="{.url_cart }"><i class="glyphicon glyphicon-{.icon = shopping-cart}"></i>&nbsp;{.cart = в корзину}</a>
+			<p class="merchandise"><a class="link" href="{.url }">{.text }</a></p>
+		</div>
+		<div class="properties"><!-- AssortmentSizes -->
+			<div class="assortment-size">
+				<span class="assortment-property">{.name }:</span><!-- AssortmentSize -->
+				<a class="size" href="{.url }">{.text }</a>
+				<!-- ~AssortmentSize -->
+			</div>
+			<!-- ~AssortmentSizes --><!-- AssortmentColors -->
+			<div class="assortment-colors">
+				<span class="assortment-property">{.name }:</span><!-- AssortmentColor -->
+				<a class="color" href="{.url }" style="background-color:{.color }"></a>
+				<!-- ~AssortmentColor -->
+			</div>
+			<!-- ~AssortmentColors --><!-- MerchandiseProperties -->
+			<div class="merchandise-property"><!-- PropertyShort -->
+				<a class="property" href="{.url }">{.text }</a>
+				<!-- ~PropertyShort --><!-- PropertyFull -->
+				<span class="assortment-property">{.name }:</span>
+				<a class="property" href="{.url }">{.text }</a><br>
+				<!-- ~PropertyFull -->
+			</div>
+			<!-- ~MerchandiseProperties -->
+		</div>
+		<!-- Control --><div class="control"><a class="link" href="{.url }">{.text }</a></div><!-- ~Control -->
+	</div>
+</div>
+<!-- ~Showcase -->
+
+
+<!--  WebMoneyAttestationLabel --><div class="wm">
+<a class="btn" href="{.url }" rel="nofollow" target=_blank><img src="{ %rel }style/icons/wm/wm.png" title="{.text }"></a>
+</div><div class="wmv">
+<a class="btnv" href="{.cert_url }={.cert_id }" rel="nofollow" target=_blank><img src="{ %rel }style/icons/wm/wmv.png" title="{.cert_text } {.cert_id }"></a>
+</div><div class="wml">
+<a class="text" href="{.cert_url }={.cert_id }" rel="nofollow" target=_blank>{.cert_link }</a>
+</div>
+<!-- ~WebMoneyAttestationLabel -->

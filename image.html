@@ -1,0 +1,44 @@
+
+<!--  Image -->
+<div class="wrap"><img class="img" src="{.src }" alt="{.alt }"></div>
+<!-- ~Image -->
+
+<!--  ImageNext -->
+<div class="wrap"><a class="link" href="{.uri }"><img class="img" src="{.src }" alt="{.alt }"></a></div>
+<!-- ~ImageNext -->
+
+<!--  Thumbnail -->
+<div class="showcase" id="img-{.code }">
+	<div class="thumbnail">
+		<img class="img" src="{.src }" alt="{.text }">
+		<a class="search" rel="group" href="{.img }"><i class="glyphicon glyphicon-search"></i></a>
+		<a class="sticker" href="{.url }">{.sticker_text }</a>
+		<div class="control">
+			<!-- Control -->
+			<a class="link" href="{.url }"><i class="glyphicon glyphicon-{.icon }"></i>{.text }</a>
+			<!-- ~Control -->
+		</div>
+		<p class="header"><a class="link" href="{.url }">{.text }</a></p>
+		<div class="properties">
+			<span class="property">Код: {.code }</span>
+			<span class="property">MD5: {.md5 }</span>
+			<span class="property">Загружено: {.time }</span>
+		</div>
+	</div>
+</div>
+<!-- ~Thumbnail -->
+
+
+<!--  Gallery -->
+<div class="showcase" id="img-{.code }">
+	<div class="gallery">
+		<img class="img" src="{.src }" alt="{.text }">
+		<a class="search" rel="group" href="{.img }"><i class="glyphicon glyphicon-search"></i></a>
+		<!-- Sticker -->
+		<a class="sticker" href="{.url }">{.sticker_text }</a>
+		<!-- ~Sticker -->
+		<p class="header">{.text }</p>
+	</div>
+</div>
+<!-- ~Gallery -->
+

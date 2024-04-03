@@ -1,0 +1,426 @@
+﻿<!--  ФОРМЫ -->
+
+<!--  ConfiguratorForm -->
+<form class="form" action="{.action }" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded }">
+<!--  HiddenName -->
+<input type="hidden" name="{ %target }" value="{ %id }">
+<!-- ~HiddenName -->
+<!--  Hidden -->
+<input id="{.event }" type="hidden" name="{.event }" value="{.value }">
+<!-- ~Hidden -->
+<!--  Slices -->
+<fieldset class="set">
+	<legend>{.legend }</legend>
+	<!--  Input -->
+	<p>
+		<label><span>{.ne }&nbsp;</span>{.label }</label>
+		<input type="{.type = text}" name="{.name }" value="{.value }"{.da }{.ro }>
+	</p>
+	<!-- ~Input -->
+<!-- ~Slices -->
+</fieldset>
+<table class="tab" cellspacing="0">
+[ Caption ]
+	<thead>
+	<tr>
+		<th class="name"><span class="name">{.text.name }</span></th>
+		<th class="title"><span class="title">{.text.title }</span></th>
+		<th class="value"><span class="value">{.text.value }</span></th>
+		<th class="ml"><span class="ml">{.text.ml }</span></th>
+	</tr>
+	</thead>
+	<tbody>
+	<!--  Row -->
+	<tr>
+		<th class="row">{.name }</th>
+		<td><input type="text" name="{.title }" value="{.value }"></td>
+		<td>
+			<!-- ^Cell -->
+			<!--  Text -->
+			<input type="text" name="{.name }" value="{.value }"{.ro }>
+			<!-- ~Text -->
+			<!--  Select -->
+			<select name="{.name }"{.da }{.mu }>
+				<!--  Option -->
+				<option value="{.value }"{.se }>{.text }</option>
+				<!-- ~Option -->
+			</select>
+			<!-- ~Select -->
+			<!--  Checkbox -->
+			<input class="checkbox" type="checkbox" name="{.name }"{.ch }>
+			<!-- ~Checkbox -->
+			<!-- ~Cell -->
+		</td>
+		<td><input class="checkbox" type="checkbox" name="{.ml }"{.ch }{.da }></td>
+	</tr>
+	<!-- ~Row -->
+	</tbody>
+</table>
+<input class="button submit" type="submit" value="{.submit = Сохранить}">
+</form>
+<!-- ~ConfiguratorForm -->
+
+<!--  FieldsetForm : FieldsetForm -->
+<form action="{.action }" class="form" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded }">
+<!--  HiddenName -->
+<input type="hidden" name="{ %target }" value="{ %id }">
+<!-- ~HiddenName -->
+<!--  Hidden -->
+<input id="{.event }" type="hidden" name="{.event }" value="{.value }">
+<!-- ~Hidden -->
+<!--  Fieldset -->
+<fieldset class="set">
+	<legend>{.legend }</legend>
+	<!-- ^Variator -->
+	<!--  Input -->
+	<div class="row">
+		<label><span>{.ne }&nbsp;</span>{.label }</label>
+		<input id="{.name }" type="{.type = text}" name="{.name }" value="{.value }"{.da }{.ro }>
+	</div>
+	<!-- ~Input -->
+	<!--  File -->
+	<div class="row">
+		<label>{.label }</label>
+		<input id="{.name }" type="file" name="{.name }">
+	</div>
+	<!-- ~File -->
+	<!--  FileMultiple -->
+	<div class="row">
+		<label>{.label }</label>
+		<input id="{.name }" type="file" name="{.name }[]" multiple="multiple">
+	</div>
+	<!-- ~FileMultiple -->
+	<!--  Checkbox -->
+	<div class="row">
+		<label>{.label }</label>
+		<input id="{.name }" class="checkbox" type="checkbox" name="{.name }"{.ch }{.da }>
+	</div>
+	<!-- ~Checkbox -->
+	<!--  Radio -->
+	<div class="row">
+		<label><span>{.ne }&nbsp;</span>{.label }</label><div class="radio">
+		<!--  Option -->
+		<input type="radio" name="{.name }" value="{.value }"{.ch }{.da }{.ro }> {.text }{.br }
+		<!-- ~Option -->
+		</div>
+	</div>
+	<!-- ~Radio -->
+	<!--  Select -->
+	<div class="row">
+		<label><span>{.ne }&nbsp;</span>{.label }</label>
+		<select class="select" id="{.name }" name="{.name }"{.da }{.mu }>
+			<!--  Option -->
+			<option value="{.value }"{.se }>{.text }</option>
+			<!-- ~Option -->
+			<!--  Optgroup -->
+			<optgroup label="{.label }"{.da }>
+				<!--  Option -->
+				<option value="{.value }"{.se }>{.text }</option>
+				<!-- ~Option -->
+			</optgroup>
+			<!-- ~Optgroup -->
+		</select>
+	</div>
+	<!-- ~Select -->
+	<!--  DateSelector : DateSelector -->
+	<div class="row">
+		<label>{.label }</label>
+		<select style="width:30%" name="{.year }"{.da }>
+			<!--  Year -->
+			<option value="{.value }"{.se }>{.text }</option>
+			<!-- ~Year -->
+			</select>
+			<select style="width:30%" name="{.month }"{.da }>
+			<!--  Month -->
+			<option value="{.value }"{.se }>{.text }</option>
+			<!-- ~Month -->
+			</select>
+			<select style="width:30%" name="{.day }"{.da }>
+			<!--  Day -->
+			<option value="{.value }"{.se }>{.text }</option>
+			<!-- ~Day -->
+		</select>
+	</div>
+	<!-- ~DateSelector -->
+	<!--  Captcha -->
+	<div class="row">
+		<label class="captcha"><span>*&nbsp;</span>{.label }</label>
+		<img class="img" src="{.src }">
+		<a class="rep" href="{.uri }">{.repeat=repeat }</a>
+		<input class="captcha" type="text" size="10" name="{.name }">
+	</div>
+	<!-- ~Captcha -->
+	<!--  Textarea -->
+	<div class="row">
+		<label class="label"><span>{.ne }&nbsp;</span>{.label }</label>
+		<textarea class="textarea" id="{.name }" name="{.name }"{.da }{.ro }>{.text }</textarea>
+	</div>
+	<!-- ~Textarea -->
+	<!-- ~Variator -->
+	<!--  Submit -->
+	<div class="actions">
+		<button type="submit" class="btn">{.submit = Сохранить}</button>
+	</div>
+	<!-- ~Submit -->
+</fieldset>
+<!-- ~Fieldset -->
+</form>
+<!-- ~FieldsetForm -->
+
+<!--  InlineForm : InlineForm -->
+<form action="{.action }" class="form" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded }">
+<!--  HiddenName -->
+<input type="hidden" name="{ %target }" value="{ %id }">
+<!-- ~HiddenName -->
+<!--  Hidden -->
+<input id="{.event }" type="hidden" name="{.event }" value="{.value }">
+<!-- ~Hidden -->
+	<!--  Fieldset -->
+	<fieldset class="set">
+		<!-- ^Variator -->
+		<!--  Checkbox -->
+		<input id="{.name }" class="checkbox" type="checkbox" name="{.name }"{.ch }{.da }><span class="label">{.label }</span>
+		<!-- ~Checkbox -->
+		<!--  Input -->
+		<input placeholder="{.label }" class="input" id="{.name }" type="{.type = text}" name="{.name }" value="{.value }"{.da }{.ro }>
+		<!-- ~Input -->
+		<!--  File -->
+		<label class="label">{.label }</label>
+		<input class="input" id="{.name }" type="file" name="{.name }">
+		<!-- ~File -->
+		<!--  FileMultiple -->
+		<label class="label">{.label }</label>
+		<input class="input" id="{.name }" type="file" name="{.name }[]" multiple="multiple">
+		<!-- ~FileMultiple -->
+		<!--  Select -->
+		<label class="label"><span>{.ne }&nbsp;</span>{.label }</label>
+		<select class="select" id="{.name }" name="{.name }"{.da }{.mu }>
+			<!--  Option -->
+			<option class="option" value="{.value }"{.se }>{.text }</option>
+			<!-- ~Option -->
+			<!--  Optgroup -->
+			<optgroup class="optgroup" label="{.label }"{.da }>
+				<!--  Option -->
+				<option class="option" value="{.value }"{.se }>{.text }</option>
+				<!-- ~Option -->
+			</optgroup>
+			<!-- ~Optgroup -->
+		</select>
+		<!-- ~Select -->
+		<!-- ~Variator -->
+		<button type="submit" class="btn">{.submit = <i class="glyphicon glyphicon-search"></i> }</button>
+	</fieldset>
+	<!-- ~Fieldset -->
+</form>
+<!-- ~InlineForm -->
+
+<!-- SeekForm -->
+<form action="{.action }" class="form" method="{.method = get }" autocomplete="{.auto = off }" enctype="{.enctype = application/x-www-form-urlencoded }">
+	<fieldset class="search-field">
+		<input placeholder="{.label }" class="input" id="{.name }" type="{.type = text }" name="{.name }" value="{.value }"{.da }{.ro }>
+		<button type="submit" class="button"><i class="glyphicon glyphicon-search"></i></button>
+	</fieldset>
+</form>
+<!-- ~SeekForm -->
+
+
+<!--  CheckboxForm : CheckboxForm -->
+<form action="{.action }" class="form" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded }">
+<!--  HiddenName -->
+<input type="hidden" name="{ %target }" value="{ %id }">
+<!-- ~HiddenName -->
+<!--  Hidden -->
+<input id="{.event }" type="hidden" name="{.event }" value="{.value }">
+<!-- ~Hidden -->
+	<!--  Fieldset -->
+	<fieldset class="set">
+		<legend>{.legend }</legend>
+		<!-- ^Variator -->
+		<!--  Input -->
+		<div class="row">
+			<label><span>{.ne }&nbsp;</span>{.label }</label>
+			<input id="{.name }" type="{.type = text}" name="{.name }" value="{.value }"{.da }{.ro }>
+		</div>
+		<!-- ~Input -->
+		<!--  Checkbox -->
+		<div class="row">
+			<label>{.label }</label>
+			<input id="{.name }" class="checkbox" type="checkbox" name="{.name }"{.ch }{.da }>
+		</div>
+		<!-- ~Checkbox -->
+		<!--  Textarea -->
+		<div class="row">
+			<label class="label"><span>{.ne }&nbsp;</span>{.label }</label>
+			<textarea class="area" id="{.name }" name="{.name }"{.da }{.ro }>{.text }</textarea>
+		</div>
+		<!-- ~Textarea -->
+		<!-- ~Variator -->
+		<hr>
+		<input class="btn" type="submit" value="{.submit = Сохранить}">
+	</fieldset>
+	<!-- ~Fieldset -->
+</form>
+<!-- ~CheckboxForm -->
+
+
+<!--  CheckForm : FieldsetForm -->
+<form action="{.action }" class="form" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded }">
+<!--  HiddenName -->
+<input type="hidden" name="{ %target }" value="{ %id }">
+<!-- ~HiddenName -->
+<!--  Hidden -->
+<input id="{.event }" type="hidden" name="{.event }" value="{.value }">
+<!-- ~Hidden -->
+	<!--  Fieldset -->
+	<fieldset class="set">
+		<legend>{.legend }</legend>
+		<!-- ^Variator -->
+		<!--  Checkbox -->
+		<div class="row">
+			<input id="{.name }" class="checkbox" type="checkbox" name="{.name }"{.ch }{.da }>
+			<span class="label">{.label }</span>
+		</div>
+		<!-- ~Checkbox -->
+		<!-- ~Variator -->
+		<hr>
+		<input class="btn" type="submit" value="{.submit = Сохранить}">
+	</fieldset>
+	<!-- ~Fieldset -->
+</form>
+<!-- ~CheckForm -->
+
+
+<!--  DatagreedForm : FieldsetForm -->
+<form class="form" action="{.action }" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded }">
+<!--  HiddenName -->
+<input type="hidden" name="{ %target }" value="{ %id }">
+<!-- ~HiddenName -->
+<!--  Hidden -->
+<input id="{.event }" type="hidden" name="{.event }" value="{.value }">
+<!-- ~Hidden -->
+	<!--  Fieldset -->
+	<table class="tab" cellspacing="0">
+		<caption class="cap">{.legend }</caption>
+		<tr>
+			<!-- ^Variator -->
+			<!--  Text -->
+			<td><span class="text">{.text }</span>{.br }
+			<!-- ~Text -->
+			<!--  Item -->
+			<td><a class="text" href="{ %gate }{ %gq }{ %location }{ %ge }{ %id }{ %ga }{.event }{ %eq }{.value }{ %end }">{.text }</a>{.br }
+			<!-- ~Item -->
+			<!--  Reloc -->
+			<td><a class="text" href="{ %gate }{ %gq }{ %location }{ %ge }{.number }{ %ga }{.event }{ %eq }{.value }{ %end }">{.text }</a>{.br }
+			<!-- ~Reloc -->
+			<!--  Url -->
+			<td><a class="text" href="{.url }" rel="nofollow">{.text }</a>{.br }
+			<!-- ~Url -->
+			<!--  Input -->
+			<td><input type="{.type = text }" name="{.name }" value="{.value }"{.da }{.ro }></td>
+			<!-- ~Input -->
+			<!--  File -->
+			<td>
+				<label>{.label }</label>
+				<input type="file" name="{.name }">
+			</td>
+			<!-- ~File -->
+			<!--  FileMultiple -->
+			<td>
+				<label>{.label }</label>
+				<input type="file" name="{.name }[]" multiple="multiple">
+			</td>
+			<!-- ~FileMultiple -->
+			<!--  Checkbox -->
+			<td>
+				<label>{.label }</label>
+				<input class="checkbox" type="checkbox" name="{.name }"{.ch }{.da }>
+			</td>
+			<!-- ~Checkbox -->
+			<!--  Radio -->
+			<td>
+				<label><span>{.ne }&nbsp;</span>{.label }</label>
+				<div class="radio">
+				<!--  Option -->
+				<input type="radio" name="{.name }" value="{.value }"{.ch }{.da }{.ro }> {.text }{.br }
+				<!-- ~Option -->
+				</div>
+			</td>
+			<!-- ~Radio -->
+			<!--  Select -->
+			<td>
+				<label><span>{.ne }&nbsp;</span>{.label }</label>
+				<select name="{.name }"{.da }{.mu }>
+					<!--  Option -->
+					<option value="{.value }"{.se }>{.text }</option>
+					<!-- ~Option -->
+					<!--  Optgroup -->
+					<optgroup label="{.label }"{.da }>
+						<!--  Option -->
+						<option value="{.value }"{.se }>{.text }</option>
+						<!-- ~Option -->
+					</optgroup>
+				<!-- ~Optgroup -->
+				</select>
+			</td>
+			<!-- ~Select -->
+			<!--  DateSelector : DateSelector -->
+			<td>
+				<label>{.label }</label>
+				<select style="width:30%" name="{.year }"{.da }>
+					<!--  Year -->
+					<option value="{.value }"{.se }>{.text }</option>
+					<!-- ~Year -->
+				</select>
+				<select style="width:30%" name="{.month }"{.da }>
+					<!--  Month -->
+					<option value="{.value }"{.se }>{.text }</option>
+					<!-- ~Month -->
+				</select>
+				<select style="width:30%" name="{.day }"{.da }>
+					<!--  Day -->
+					<option value="{.value }"{.se }>{.text }</option>
+					<!-- ~Day -->
+				</select>
+			</td>
+			<!-- ~DateSelector -->
+			<!--  Captcha -->
+			<td>
+				<label><span>*&nbsp;</span>{.label }</label>
+				<img style="float:left; width:20%" src="{.src }">
+				<input style="margin:2% 0 0 5%; width:35%;" type="text" size="10" name="{.name }">
+			</td>
+			<!-- ~Captcha -->
+			<!--  Textarea -->
+			<td>
+				<label class="label"><span>{.ne }&nbsp;</span>{.label }</label>
+				<textarea name="{.name }" class="i-text" rows="{.rows = 4}" cols="{.cols = 50}"{.da }{.ro }>{.text }</textarea>
+			</td>
+			<!-- ~Textarea -->
+			<!-- ~Variator -->
+		</table>
+		<input class="button submit" type="submit" value="{.submit = Сохранить}">
+	</fieldset>
+	<!-- ~Fieldset -->
+</form>
+<!-- ~DatagreedForm -->
+
+<!--  DonateForm -->
+<div class="showcase">
+	<form action="{.action }" class="donate" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded }">
+		<!--  Logo -->
+		<img src="{ %rel }{.logo }">
+		<!-- ~Logo -->
+		<fieldset class="search-field">
+			<input id="{.id }" type="{.type = text}" name="{.name }" value="{.value = 100}">
+			<i class="glyphicon glyphicon-{.currency = rub} currency"></i>
+		</fieldset>
+		<!--  Hidden -->
+		<input id="{.event }" type="hidden" name="{.event }" value="{.value }">
+		<!-- ~Hidden -->
+		<input class="submit" type="submit" value="{.submit = Пожертвовать}">
+		<!--  Comment -->
+		<div class="comment">{.text=Без комиссии }</div>
+		<!-- ~Comment -->
+	</form>
+</div>
+<!-- ~DonateForm -->

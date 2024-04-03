@@ -1,0 +1,79 @@
+﻿
+<!-- Авторизация -->
+
+<!--  AuthForm -->
+<form id="authform" name="authform" action="{.action}" method="{.method = post}" autocomplete="{.auto = off}">
+	<div class="ff">
+	<label>Пользователь:</label>
+	<input type="text" name="{.login}" id="{.login}" value="{.value}">
+	</div>
+	<div class="ff">
+	<label>Пароль:</label>
+	<input type="password" name="{.pwd}" value="">
+	<input type="submit" value="Войти">
+	</div>
+</form>
+<script type="text/javascript"><!--
+	document.authform.{.login}.focus();
+// --></script>
+<!-- ~AuthForm -->
+
+
+<!--  FormLine -->
+<form{.id }{.class }{.style }{.attr } action="{.action }" method="{.method = post}" autocomplete="{.auto = off}">
+	<input type="hidden" name="{ %target }" value="{ %id }"><!--  Hidden -->
+	<input type="hidden" name="{.event }" value="{.value }">
+	<!-- ~Hidden --><!--  Field -->
+	<span{.id }{.class }{.style }{.attr }><label>{.label }</label>
+	<input type="{.type = text}" id="{.name}" name="{.name }" value="{.value }"></span>
+	<!-- ~Field -->
+	<input{.id }{.class }{.style }{.attr } type="submit" value="{.submit = Отправить}">
+</form>
+<!-- ~FormLine -->
+
+
+<!--  AuthPageForm -->
+<div class="wrap" id="forms">
+<form id="authform" name="authform" action="{.action }" method="{.method = post}" autocomplete="{.auto = off}">
+	<fieldset>
+		<legend>Вход в систему</legend>
+		<div class="f-row">
+			<label>Пользователь:</label>
+			<div class="f-inputs"><input type="text" name="{.login }" id="{.login }" value="{.value }" class="i-text"></div>
+		</div>
+		<div class="f-row">
+			<label>Пароль:</label>
+			<div class="f-inputs"><input type="password" name="{.pwd }" value="" class="i-text"></div>
+		</div>
+	</fieldset>
+	<div class="f-row">
+		<div class="f-actions"><input type="submit" value="Войти" class="button"></div>
+	</div>
+</form>
+</div>
+<script type="text/javascript"><!--
+	document.authform.{.login }.focus();
+// --></script>
+<!-- ~AuthPageForm -->
+
+
+<!--  AuthRecallForm -->
+<div class="wrap" id="forms">
+<form id="authform" name="authform" action="{.action }" method="{.method = post}" autocomplete="{.auto = off}">
+	<fieldset>
+		<legend>Восстановление пароля</legend>
+		<div class="f-row">
+			<label>Ваш адрес элетронной почты:</label>
+			<div class="f-inputs"><input type="text" name="{.email }" id="{.email }" value="{.value }" class="i-text"></div>
+		</div>
+	</fieldset>
+	<div class="f-row">
+		<div class="f-actions"><input type="submit" value="Получить пароль" class="button"></div>
+	</div>
+</form>
+</div>
+<script type="text/javascript"><!--
+	document.authform.{.email }.focus();
+// --></script>
+<!-- ~AuthRecallForm -->
+

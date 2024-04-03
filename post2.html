@@ -1,0 +1,423 @@
+﻿
+<!--  PrismStyle -->
+<link href="{ %rel }{ %script }prism/themes/{.style }.css" rel="stylesheet">
+<!-- ~PrismStyle -->
+
+<!--  Prism -->
+<script src="{ %rel }{ %script }prism/components/prism-core.js"></script>
+<script src="{ %rel }{ %script }prism/plugins/autoloader/prism-autoloader.js"></script>
+<script>
+Prism.plugins.autoloader.languages_path = '{ %rel }{ %script }prism/components/';
+</script>
+<!-- ~Prism -->
+
+<!-- %PostEditorial  -->
+<div class="box">
+	<h5 class="status">{.status }</h5>
+	<!--  Message -->
+	<p class="message">{.text }</p>
+	<!-- ~Message -->
+</div>
+<!-- ~PostEditorial  -->
+
+<!-- %PostControl -->
+<div class="bar">
+	<ul class="menu">
+		<!-- Item -->
+		<li class="item">
+			<a class="link" href="{.uri }">{.text }</a>{.submenu }
+		</li>
+		<!-- ~Item -->
+	</ul>
+</div>
+<!-- ~PostControl -->
+
+<!-- %PostCategory -->
+<div class="category"><a class="link" href="{.uri }">{.name }</a></div>
+<!-- ~PostCategory -->
+
+<!-- %PostInfo -->
+<div class="info">
+	<!--  Date -->
+	<span class="date">{.date }</span>
+	<!-- ~Date -->
+	<!--  Author -->
+	<a class="link" href="{.uri }">{.author }</a>
+	<!-- ~Author -->
+</div>
+<!-- ~PostInfo -->
+
+<!-- %PostFooter -->
+<hr class="hr">
+<div class="text">{.text }</div>
+<!-- ~PostFooter -->
+
+<!-- %PostTags -->
+<hr class="hr">
+<div class="tags">
+	<!-- Item -->
+	<a class="link" href="{.uri }">{.text }</a>
+	<!-- ~Item -->
+</div>
+<!-- ~PostTags -->
+
+<!-- %PostSource -->
+<hr class="hr">
+<div class="source">
+	<a class="link" href="{.url }">{.text = Источник}</a>
+</div>
+<!-- ~PostSource -->
+
+<!--  Post -->
+<div class="post">
+	<h1 class="header">{.header }</h1>
+	[ Editorial = PostEditorial ]
+	[ Control   = PostControl ]
+	[ Category  = PostCategory ]
+	[ Info      = PostInfo ]
+	<div class="text" style="clear:both;">{.text }</div>
+	[ Footer    = PostFooter ]
+	[ Tags      = PostTags ]
+	<!--  Next -->
+	<div class="next">
+		<a class="link" href="{.uri }">{.header }</a>
+	</div>
+	<!-- ~Next -->
+	<!--  Prev -->
+	<div class="next">
+		<a class="link" href="{.uri }">{.header }</a>
+	</div>
+	<!-- ~Prev -->
+	[ Source    = PostSource ]
+</div>
+<!-- ~Post -->
+
+<!--  NodeTags -->
+<h3 class="header">{.header }</h3>
+<div class="tags">
+	<ul>
+		<!-- Item -->
+		<li>
+			<a class="link" href="{.uri }">{.text }</a>
+		</li>
+		<!-- ~Item -->
+	</ul>
+</div>
+<!-- ~NodeTags -->
+
+<!--  BottomPost -->
+<div class="post">
+	<h1 class="header">{.header }</h1>
+	[ Editorial = PostEditorial ]
+	[ Control   = PostControl ]
+	[ Category  = PostCategory ]
+	[ Info      = PostInfo ]
+	<div class="text" style="clear:both;">{.text }</div>
+	[ Footer    = PostFooter ]
+	[ Tags      = PostTags ]
+	[ Source    = PostSource ]
+</div>
+<!-- ~BottomPost -->
+
+<!--  PostTape -->
+<div class="post">
+	<h3 class="header">
+		<a class="link" href="{.uri }">{.header }</a>
+	</h3>
+	[ Editorial = PostEditorial ]
+	[ Control   = PostControl ]
+	[ Category  = PostCategory ]
+	[ Info      = PostInfo ]
+	<!--  Evaluation -->
+	<div class="evaluation">
+		<div class="votes">
+			<!--  Star -->
+			<span title="{.title }"><i class="glyphicon glyphicon-{.icon = star c-green}"></i></span>
+			<!-- ~Star -->
+		</div>
+		<div class="value">{.rating }</div>
+	</div>
+	<!-- ~Evaluation -->
+	<!--  TapeText  -->
+	<div class="text" style="clear:both;">{.text }</div>
+	<!-- ~TapeText  -->
+	<!--  Tags -->
+	<div class="tags">
+		<!-- Item -->
+		<a class="link" href="{.uri }">{.text }</a>
+		<!-- ~Item -->
+	</div>
+	<!-- ~Tags -->
+</div>
+<!--  YandexShareID -->
+<div class="share" id="{.id = ya_share1}"></div>
+<!-- ~YandexShareID -->
+<hr class="hr">
+<!-- ~PostTape -->
+
+<!--  PostList -->
+<h3 class="header">{.header }</h3>
+<ul class="list">
+	<!--  ^Item -->
+	<!--  Root -->
+	<li class="item">
+		<a class="link" href="{.uri }">{.text }</a>
+	</li>
+	<!-- ~Root -->
+	<!--  Node -->
+	<li class="item">
+		<a class="node_link" href="{.node_uri }">{.node_text }</a>
+		<span class="divisor">{.divisor = " / "}</span>
+		<a class="link" href="{.uri }">{.text }</a>
+	</li>
+	<!-- ~Node -->
+	<!-- ~Item -->
+</ul>
+<!-- ~PostList -->
+
+<!--  PostComment -->
+<div class="comment" id="{.comment_id }">
+	<!--  Avatar  -->
+	<div class="avatar">
+		<img class="thumb" src="{.src }">
+	</div>
+	<!-- ~Avatar  -->
+	<div class="data">
+		<div class="author">
+			<span class="link"><i class="glyphicon glyphicon-user"></i> {.author }</span>
+		</div>
+		<div class="date">{.date }</div>
+		<div class="serial">
+			<span class="c-brown"><i class="glyphicon glyphicon-comment"></i> {.serial }</span>
+			<!--  CommentFor -->
+			<span class="c-absent"><i class="glyphicon glyphicon-chevron-right"></i></span>
+			<a class="contractor" href="{.anchor }">{.author }</a>
+			<span class="c-olive"><i class="glyphicon glyphicon-comment"></i> {.serial }</span>
+			<!-- ~CommentFor -->
+		</div>
+		<div class="note">{.text }</div>
+	</div>
+	<!--  Rating -->
+	<div class="rate">
+		<span title="{.t_up }"><i class="glyphicon glyphicon-thumbs-up"></i></span>
+		<span class="color" title="{.t_rating }">{.rating=0 }</span>
+		<span title="{.t_down }"><i class="glyphicon glyphicon-thumbs-down"></i></span>
+	</div>
+	<!-- ~Rating -->
+	<!--  RatingControl -->
+	<div class="rate">
+		<a href="{.url_up }" title="{.t_up }"><i class="glyphicon glyphicon-thumbs-up"></i></a>
+		<span class="color" title="{.t_rating }">{.rating = 0}</span>
+		<a href="{.url_down }" title="{.t_down }"><i class="glyphicon glyphicon-thumbs-down"></i></a>
+	</div>
+	<!-- ~RatingControl -->
+	<!--  RespondMenu -->
+	<div class="answer"><a href="{.url }">{.text }</a></div>
+	<!-- ~RespondMenu -->
+	<!--  RespondForm -->
+	<div class="respond">
+	<form action="{.action }" class="form" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded}">
+		<input id="{.event }" type="hidden" name="{.event }" value="{.value }">
+		<fieldset class="set">
+			<legend>{.legend = Ответ на комментарий}</legend>
+			<div class="area"><textarea class="textarea" id="{.name }" name="{.name }">{.text }</textarea></div>
+			<div class="actions"><button type="submit" class="btn btn-success">{.submit = OK}</button></div>
+		</fieldset>
+	</form>
+	</div>
+	<!-- ~RespondForm -->
+	<hr>
+</div>
+<!-- ~PostComment -->
+
+<!--  PostCommentForm -->
+<form action="{.action }" class="form" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded}">
+<input type="hidden" name="{ %target }" value="{ %id }">
+<input id="{.event }" type="hidden" name="{.event }" value="{.value }">
+<fieldset class="set">
+	<legend>{.legend = Добавить комментарий}</legend>
+	<div class="row">
+		<label><span>*&nbsp;</span>{.name = Имя}</label>
+		<input id="{.name_id }" type="text" name="{.name_id }" value="{.name_value }">
+	</div>
+	<div class="row">
+		<label><span>*&nbsp;</span>{.email = Email (не будет виден)}</label>
+		<input id="LOGIN" type="text" name="LOGIN" value="{.email_value }">
+	</div>
+	<div class="row">
+		<label>{.pass = Пароль (для зарегистрированных)}</label>
+		<input id="PWD" type="password" name="PWD" value="">
+	</div>
+	<div style="clear:left">
+		Также Вы можете войти используя:
+		<a href="https://loginza.ru/api/widget?token_url=https://www.fresher.ru/2013/12/06/rossiya-iz-skazki/&amp;providers_set=google,yandex,mailruapi,vkontakte,facebook,twitter,loginza,myopenid,webmoney,rambler,flickr,lastfm,openid,mailru,verisign,aol,steam&amp;lang=" class="loginza"><img src="https://www.fresher.ru/wp-content/plugins/loginza/img/yandex.png" alt="Yandex" title="Yandex">&nbsp;<img src="https://www.fresher.ru/wp-content/plugins/loginza/img/google.png" alt="Google" title="Google Accounts">&nbsp;<img src="https://www.fresher.ru/wp-content/plugins/loginza/img/vkontakte.png" alt="Вконтакте" title="Вконтакте">&nbsp;<img src="https://www.fresher.ru/wp-content/plugins/loginza/img/mailru.png" alt="Mail.ru" title="Mail.ru">&nbsp;<img src="https://www.fresher.ru/wp-content/plugins/loginza/img/twitter.png" alt="Twitter" title="Twitter">&nbsp;<img src="https://www.fresher.ru/wp-content/plugins/loginza/img/loginza.png" alt="Loginza" title="Loginza">&nbsp;<img src="https://www.fresher.ru/wp-content/plugins/loginza/img/myopenid.png" alt="MyOpenID" title="MyOpenID">&nbsp;<img src="https://www.fresher.ru/wp-content/plugins/loginza/img/openid.png" alt="OpenID" title="OpenID">&nbsp;<img src="https://www.fresher.ru/wp-content/plugins/loginza/img/webmoney.png" alt="WebMoney" title="WebMoney">&nbsp;</a>
+	</div>
+	<div class="area">
+		<label class="label"><span>*&nbsp;</span>{.text = Текст комментария}</label>
+		<textarea class="textarea" id="{.text_id }" name="{.text_id }">{.text_value }</textarea>
+	</div>
+	<div class="actions">
+		<button type="submit" class="submit">{.submit = Отправить комментарий}</button>
+	</div>
+</fieldset>
+</form>
+<!--  PostCommentForm -->
+
+<!--  PostImagesForm -->
+<form action="{.action }" class="form" method="{.method = post}" autocomplete="{.auto = off}" enctype="{.enctype = application/x-www-form-urlencoded}">
+<input type="hidden" name="{ %target }" value="{ %id }">
+<input id="{.event }" type="hidden" name="{.event }" value="{.value }">
+<fieldset class="set">
+	<legend>{.legend }</legend>
+	<!--  Checkbox -->
+	<div class="row">
+		<label>{.label }</label>
+		<input id="{.name }" class="checkbox" type="checkbox" name="{.name }"{.ch }>
+	</div>
+	<!-- ~Checkbox --></fieldset>
+<fieldset class="sub">
+	<div class="actions">
+		<button type="submit" class="btn">{.submit = Продолжить}</button>
+	</div>
+</fieldset>
+<table class="tab" cellspacing="0">
+	<!--  Caption -->
+	<caption>{.caption }</caption>
+	<!-- ~Caption -->
+	<tbody>
+	<tr>
+		<th>&nbsp;</th>
+		<th>
+			<input class="common" id="{.common }" type="checkbox" name="{.box }"{.ch }>
+		</th>
+		<th>Выбрать все</th>
+		<th>&nbsp;</th>
+	</tr>
+	<!--  Row -->
+	<tr>
+		<th class="line">{.line }</th>
+		<td class="checkbox">
+			<input class="check" id="{.check }_{.code }" type="checkbox" name="{.check }[{.code }]"{.ch }>
+		</td>
+		<td class="image">
+			<img class="{.img }" src="{.src }">
+		</td>
+		<td class="data">{.header }</td>
+	</tr>
+	<!-- ~Row -->
+</tbody></table>
+<fieldset class="sub">
+	<div class="actions">
+		<button type="submit" class="btn">{.submit = Продолжить}</button>
+	</div>
+</fieldset>
+</form>
+<script type="text/javascript">$(function(){boxChecker('{.common }','{.check }');});</script>
+<!-- ~PostImagesForm -->
+
+<!--  PostImages -->
+<!--  ImageHeader -->
+<h4 class="header">{.text }</h4>
+<!-- ~ImageHeader -->
+<!--  ImageDescribe -->
+<p class="text">{.text }</p>
+<!-- ~ImageDescribe -->
+<p><img id="{.img }" class="img" src="{.src }" alt="{.alt }"></p>
+<!--  ImageText -->
+<p class="text">{.text }</p>
+<!-- ~ImageText -->
+<!-- ~PostImages -->
+
+<!--  Voting -->
+<div class="voting" id="{.votingid }">
+	<hr class="hr">
+	<h4 class="question">{.question }</h4>
+	[ Control   = PostControl ]
+	<!--  Details -->
+	{.text }
+	<!-- ~Details -->
+	<!--  Answers -->
+	<div class="answers">
+		<!--  Answer -->
+		<div class="polling">
+			<span title="{.title }"><i class="glyphicon glyphicon-{.icon = chevron-right c-green}"></i>&nbsp;</span><span class="poll" title="{.title }">{.text }</span>
+		</div>
+		<div class="diagram">
+			<div class="graph">
+				<div style="background-color: {.color = #aaeecc}; width: {.width = 100%};">&nbsp;</div>
+			</div>
+			<div class="percent">{.percent = &nbsp;}</div>
+		</div>
+		<!-- ~Answer -->
+		<div class="voting-sum">
+			<span title="{.count }" class="poll">{.count } - {.sum }</span>
+		</div>
+	</div>
+	<!-- ~Answers -->
+	<!--  AnswersActive -->
+	<div class="answers" id="{.answersid }">
+		<!--  Answer -->
+		<div class="polling">
+			<a href="{.url }" title="{.title }"><i class="glyphicon glyphicon-{.icon = chevron-right c-green}"></i>&nbsp;</a><a class="poll" href="{.url }" title="{.title }">{.text }</a>
+		</div>
+		<div class="diagram">
+			<div class="vote">
+				<span>{.vote }</span>
+			</div>
+			<div class="graph">
+				<div style="background-color: {.color = #aaeecc}; width: {.width = 100%};">&nbsp;</div>
+			</div>
+			<div class="percent">{.percent=&nbsp; }</div>
+		</div>
+		<!-- ~Answer -->
+		<div class="voting-sum">
+			<span title="{.count }" class="poll">{.count } - {.sum }</span>
+		</div>
+	</div>
+	<!-- ~AnswersActive -->
+</div>
+<!-- ~Voting -->
+
+<!--  Evaluation -->
+<div class="evaluation">
+	<!--  Stars -->
+	<div class="values">
+		<!--  Star -->
+		<span title="{.title }"><i class="glyphicon glyphicon-{.icon = star c-green}"></i></span>
+		<!-- ~Star -->
+	</div>
+	<!-- ~Stars -->
+	<!--  StarsControl -->
+	<div class="values">
+		<!--  Star -->
+		<a href="{.url }" title="{.title }"><i class="glyphicon glyphicon-{.icon = star c-green}"></i></a>
+		<!-- ~Star -->
+	</div>
+	<!-- ~StarsControl -->
+	<!--  Rating -->
+	<div class="rating">
+		<span>{.rating }</span>
+		<sub>( {.vote } )</sub>
+	</div>
+	<!-- ~Rating -->
+</div>
+<!-- ~Evaluation -->
+
+<!--  Likes -->
+<div class="likes">
+	<!--  Rating -->
+	<div class="rate">
+		<span title="{.t_up }"><i class="glyphicon glyphicon-thumbs-up"></i></span>
+		<span class="color" title="{.t_rating }">{.rating=0 }</span>
+		<span title="{.t_down }"><i class="glyphicon glyphicon-thumbs-down"></i></span>
+	</div>
+	<!-- ~Rating -->
+	<!--  RatingControl -->
+	<div class="rate">
+		<a href="{.url_up }" title="{.t_up }"><i class="glyphicon glyphicon-thumbs-up"></i></a>
+		<span class="color" title="{.t_rating }">{.rating=0 }</span>
+		<a href="{.url_down }" title="{.t_down }"><i class="glyphicon glyphicon-thumbs-down"></i></a>
+	</div>
+	<!-- ~RatingControl -->
+</div>
+<!-- ~Likes -->

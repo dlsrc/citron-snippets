@@ -1,0 +1,159 @@
+﻿
+<!-- ТЕКСТ -->
+
+<!--  Opinion -->
+<!--  OpinionTopHeader -->
+<h3 class="header">{.text }</h3>
+<!-- ~OpinionTopHeader -->
+<!--  OpinionTopControl -->
+<div class="bar"><ul class="menu">
+	<!-- Item -->
+	<li class="item"><a class="link" href="{.uri }">{.text }</a></li>
+	<!-- ~Item -->
+</ul></div>
+<!-- ~OpinionTopControl -->
+<!--  OpinionEntry -->
+<div class="hr"><hr></div>
+	<!--  OpinionHeader -->
+	<h4 class="header">{.text }</h4>
+	<!-- ~OpinionHeader -->
+	<!--  OpinionThumb -->
+	<div class="thumb">
+		<a class="link" href="{.uri }"><img class="img" src="{.src }"></a>
+	</div>
+	<!-- ~OpinionThumb -->
+	<!--  OpinionThumbURL -->
+	<div class="thumb">
+		<a class="link" href="{.url }"><img class="img" src="{.src }"></a>
+	</div>
+	<!-- ~OpinionThumbURL -->
+	<div class="opinion">
+		<div class="source">
+			<span class="date">{.date }</span>
+			<span class="name">{.name }</span>
+		</div>
+		{.text }
+	</div>
+	<!--  OpinionControl -->
+	<div class="bar"><ul class="menu">
+		<!-- Item -->
+		<li class="item"><a class="link" href="{.uri }">{.text }</a></li>
+		<!-- ~Item -->
+	</ul></div>
+	<!-- ~OpinionControl -->
+	<!--  OpinionAnswer -->
+	<div class="answer">
+		<span class="date">{.date }</span>
+		<span class="name">{.name = Комментарий администратора}</span>
+	</div>
+	{.text }
+	<!-- ~OpinionAnswer -->
+<!-- ~OpinionEntry -->
+<hr>
+<!-- ~Opinion -->
+
+<!--  Text -->
+<!--  TopControl -->
+<div class="bar"><ul class="menu">
+	<!-- ^Item -->
+	<!--  Locate -->
+	<li class="item"><a class="link" href="{.uri }">{.text }</a>{.submenu }</li>
+	<!-- ~Locate -->
+	<!--  External -->
+	<li class="item"><a class="link" href="{.uri }" rel="nofollow">{.text }</a>{.submenu }</li>
+	<!-- ~External -->
+	<!--  Texts -->
+	<li class="item"><span class="link">{.text }</span>{.submenu }</li>
+	<!-- ~Texts -->
+	<!-- ~Item -->
+</ul></div>
+<!-- ~TopControl -->
+<!--  TopShare -->
+<div id="{.id = share_top}"></div>
+<!-- ~TopShare -->
+<div class="text">{.text }</div>
+<!--  BottomControl -->
+<div class="bar"><ul class="menu">
+	<!-- ^Item -->
+	<!--  Locate -->
+	<li class="item"><a class="link" href="{.uri }">{.text }</a>{.submenu }</li>
+	<!-- ~Locate -->
+	<!--  External -->
+	<li class="item"><a class="link" href="{.uri }" rel="nofollow">{.text }</a>{.submenu }</li>
+	<!-- ~External -->
+	<!--  Texts -->
+	<li class="item"><span class="link">{.text }</span>{.submenu }</li>
+	<!-- ~Texts -->
+	<!-- ~Item -->
+</ul></div>
+<!-- ~BottomControl -->
+<!--  BottomShare -->
+<div id="{.id=share_bottom}"></div>
+<!-- ~BottomShare -->
+<!-- ~Text -->
+
+<!--  Block : Text -->
+<!--  TopControl -->
+<ul class="menu">
+	<!-- ^Item -->
+	<!--  Locate -->
+	<li class="item"><a class="link" href="{.uri }">{.text }</a>{.submenu }</li>
+	<!-- ~Locate -->
+	<!--  External -->
+	<li class="item"><a class="link" href="{.uri }" rel="nofollow">{.text }</a>{.submenu }</li>
+	<!-- ~External -->
+	<!--  Texts -->
+	<li class="item"><span class="link">{.text }</span>{.submenu }</li>
+	<!-- ~Texts -->
+	<!-- ~Item -->
+</ul>
+<!-- ~TopControl -->
+<div class="text">{.text }</div>
+<!--  BottomControl -->
+<ul class="menu">
+	<!-- ^Item -->
+	<!--  Locate -->
+	<li class="item"><a class="link" href="{.uri }">{.text }</a>{.submenu }</li>
+	<!-- ~Locate -->
+	<!--  External -->
+	<li class="item"><a class="link" href="{.uri }" rel="nofollow">{.text }</a>{.submenu }</li>
+	<!-- ~External -->
+	<!--  Texts -->
+	<li class="item"><span class="link">{.text }</span>{.submenu }</li>
+	<!-- ~Texts -->
+	<!-- ~Item -->
+</ul>
+<!-- ~BottomControl -->
+<!-- ~Block -->
+
+<!--  Message -->
+{.text }
+<!-- ~Message -->
+
+<!--  Paragraph : Message -->
+<p class="text">{.text }</p>
+<!-- ~Paragraph -->
+
+<!--  Span : Message -->
+<span class="text">{.text }</span>
+<!-- ~Span -->
+
+<!--  MessageBox -->
+<div class="box">
+	<h3 class="header">{.head }</h3>
+	<p class="text">{.text }</p>
+</div>
+<!-- ~MessageBox -->
+
+<!--  Blockquote -->
+<blockquote class="text">{.text }</blockquote>
+<!-- ~Blockquote -->
+
+<!--  Informer -->
+<div class="informer">
+	<!--  HTML -->
+	{.text }
+	<!-- ~HTML -->
+</div>
+<!-- ~Informer -->
+

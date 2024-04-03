@@ -1,0 +1,52 @@
+﻿<!--  Заголовки и метаданные -->
+
+<!--  Style -->
+<link rel="stylesheet" href="{ %rel }{.style }" type="text/css" media="{.media = screen}">
+<!-- ~Style -->
+
+<!--  PageTitle -->
+<title>{.text }</title>
+<!-- ~PageTitle -->
+
+<!--  Meta -->
+<meta {.property=name }="{.name }" {.value = content}="{.content }">
+<!-- ~Meta -->
+
+<!--  Header -->
+<h{.h=1 } class="text">{.text }</h{.h }>
+<!-- ~Header -->
+
+<!--  HeaderEdit -->
+<h1 class="text"><a class="link" href="{.uri }">{.text }</a></h1>
+<!-- ~HeaderEdit -->
+
+<!--  HeaderForm -->
+<form class="form" method="{.method = post}" autocomplete="{.auto = off}" action="{.action }">
+	<input type="hidden" name="{ %name }" value="{ %name }">
+	<input type="text" name="{.name }" value="{.value }">
+	<input type="submit" value="Запомнить">
+</form>
+<!-- ~HeaderForm -->
+
+<!--  MetaForm -->
+<form class="form" method="{.method = post}" autocomplete="{.auto = off}" action="{.action }" id="forms">
+	<fieldset>
+		<legend>Метаданные</legend>
+		<div class="f-row">
+			<label>Заголовок страницы (title):</label>
+			<div class="f-inputs"><input name="{.tname }" value="{.title }" type="text" class="i-text"></div>
+		</div>
+		<div class="f-row">
+			<label>Описание страницы (description):</label>
+			<div class="f-inputs"><textarea name="{.dname }" class="i-text" rows="4" cols="50">{.description }</textarea></div>
+		</div>
+		<div class="f-row">
+			<label>Ключевые слова (keywords):</label>
+			<div class="f-inputs"><textarea name="{.kname }" class="i-text" rows="4" cols="50">{.keywords }</textarea></div>
+		</div>
+	</fieldset>
+	<div class="f-row">
+		<div class="f-actions"><input type="submit" value="Запомнить" class="button"></div>
+	</div>
+</form>
+<!-- ~MetaForm -->

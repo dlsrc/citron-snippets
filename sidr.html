@@ -1,0 +1,16 @@
+﻿
+<!--  ResponsiveMenu -->
+<ul class="menu" id="{.mobile_id }">
+	<li><a class="mobile" id="{.responsive_id }" href="#{.anchor }">{.icon }</a></li>
+</ul>
+<!-- ~ResponsiveMenu -->
+
+<!--  ResponsiveJQ -->
+<script type="text/javascript" charset="utf-8">
+$(function(){
+//<!--  Query -->
+$('#{.responsive_id }').sidr({name:'{.anchor }', source:'#{.source }', side:'{.side }', displace:{.displace }});
+//<!-- ~Query -->
+});
+</script>
+<!-- ~ResponsiveJQ -->

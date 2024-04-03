@@ -1,0 +1,294 @@
+﻿
+<!--  СКРИПТЫ -->
+
+<!--  ScriptOpenWindow -->
+<script type="text/javascript" charset="utf-8">
+function openWindow(name, value, width, height) {
+	var query='{ %host }?{ %location }={ %id }&' + name + '=' + value;
+	var win = 'toolbar=0,location=0,directoties=0,status=0,menubar=0,scrollbars=1,resizable=0';
+
+	if ('0' != width) {
+		win+= ',width=' + width;
+	}
+
+	if ('0' != height) {
+		win+= ',height=' + height;
+	}
+
+	window.open(query, 'openWindow', win).focus();
+}
+</script>
+<!-- ~ScriptOpenWindow -->
+
+
+<!--  ScriptOpenWindow2 -->
+<script type="text/javascript" charset="utf-8">
+function openWindow(name, value, width, height) {
+	var query='{ %host }?' + name + '=' + value;
+	var win = 'toolbar=0,location=0,directoties=0,status=0,menubar=0,scrollbars=1,resizable=0';
+
+	if ('0' != width) {
+		win+= ',width=' + width;
+	}
+
+	if ('0' != height) {
+		win+= ',height=' + height;
+	}
+
+	window.open(query, 'openWindow', win).focus();
+}
+</script>
+<!-- ~ScriptOpenWindow2 -->
+
+
+<!--  SETUP -->
+
+<!--  JQuery -->
+<script type="text/javascript" src="{ %rel }{ %script }jquery.js?v=1.11.2" charset="utf-8"></script>
+<!-- ~JQuery -->
+
+<!--  JQueryUI -->
+<link rel="stylesheet" href="{ %rel }{ %script }jquery-ui.css?v=1.11.4" type="text/css" media="screen" charset="utf-8">
+<script type="text/javascript" src="{ %rel }{ %script }jquery-ui.js?v=1.11.4" charset="utf-8"></script>
+<!-- ~JQueryUI -->
+
+
+<!--  FancyBox -->
+<link rel="stylesheet" href="{ %rel }{ %script }fancybox/jquery.fancybox.css?v=2.2.0" type="text/css" media="screen">
+<script type="text/javascript" src="{ %rel }{ %script }fancybox/jquery.fancybox.pack.js?v=2.1.5" charset="utf-8"></script>
+<script type="text/javascript" src="{ %rel }{ %script }jquery.mousewheel.js?v=3.1.12" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function(){$(".{.box = fancybox}").fancybox({padding:0,margin:4,mouseWheel:true,arrows:false,openEffect:'elastic',openSpeed:100,closeEffect:'elastic',closeSpeed:100,closeBtn:true,closeClick:false,nextClick:true,fitToView:true,helpers:{title:{type:'over'},overlay:{closeClick:true,speedOut:100,showEarly:true,locked:true}}});});
+</script>
+<!-- ~FancyBox -->
+
+
+<!--  WEBGATE -->
+
+<!--  WebgateJQ -->
+<script type="text/javascript" src="{ %rel }{ %script }webgate.min.js?v=2.3.2" charset="utf-8"></script>
+<!-- ~WebgateJQ -->
+
+<script type="text/javascript" src="{ %rel }{ %script }webgate.js?v=2.3.2" charset="utf-8"></script>
+
+<!--  WebgateCommentLike -->
+<script type="text/javascript" charset="utf-8">
+$(function(){controlCommentLike('{.up }', '{.down }', '{.class }', '{.plus }', '{.minus }', '{.zero }', '{.js }');});
+</script>
+<!-- ~WebgateCommentLike -->
+
+<!--  WebgateWidget -->
+<script type="text/javascript" charset="utf-8">
+$(function(){var widget = $('#{.id }'); if (!widget.length) return(true); var url; widget.on('click', 'a[href^="\\/"]', function() {url = $(this).attr('href'); $.get(url, {'{.js }':'yes'}, function(value,code) {if ('success' == code) {if (value.search(/^<div\s+class\=\"{.class }\">/) != -1) {widget.html(value);}}}); return(false);});});
+</script>
+<!-- ~WebgateWidget -->
+
+<!--  WebgateCommentRespond -->
+<script type="text/javascript" charset="utf-8">
+$(function(){controlCommentRespond('{.class }', '{.name }', '{.area }', '{.areaid }', '{.respond }', '{.close }');});
+</script>
+<!-- ~WebgateCommentRespond -->
+
+<!--  WebgateImageViewer -->
+<script type="text/javascript" charset="utf-8">
+$(function(){controlImageViewer({name:'{.m_event }',text:'{.m_title }',style:'{.m_style }',icon:'{.m_icon }'},{name:'{.f_event }',text:'{.f_title }',style:'{.f_style }',icon:'{.f_icon }'},{name:'{.c_event }',value:'{.c_value }',text:'{.c_title }',style:'{.c_style }',icon:'{.c_icon }',gate:'{.c_gate }',on:'{.c_on }',off:'{.c_off }',menu:'{.c_menu }',mstyle:'{.c_mstyle }',micon:'{.c_micon }'},{name:'{.d_event }',value:'{.d_value }',text:'{.d_title }',style:'{.d_style }',icon:'{.d_icon }',menu:'{.d_mtitle }',mstyle:'{.d_mstyle }',micon:'{.d_micon }'},{name:'{.r_event }',value:'{.r_value }',text:'{.r_title }',style:'{.r_style }',icon:'{.r_icon }'},{name:'{.n_event }',value:'{.n_value }',text:'{.n_title }',style:'{.n_style }',icon:'{.n_icon }'},'{.ajax = ajax}',{memory:'{.s_memory }',forget:'{.s_forget }'});});
+</script>
+<!-- ~WebgateImageViewer -->
+
+<!--  WebgateFavorites -->
+<script type="text/javascript" charset="utf-8">
+$(function(){
+	controlFavorites(
+		{name:'{.free_event = free}',text:'{.free_text }',title:'{.free_title = Добавить}',style:'{.free_style }'},
+		{name:'{.fav_event = fav}',text:'{.fav_text}',title:'{.fav_title = Удалить}',style:'{.fav_style }'},
+		{url:'{.chosen_url }',text:'{.chosen_text = Избранные}',ch_class:'{.chosen_class = favorites}',style:'{.chosen_style }',off:'{.chosen_off }'},
+		'{.ajax = ajax}'
+	);
+});
+</script>
+<!-- ~WebgateFavorites -->
+
+<!--  AddToCart -->
+<script type="text/javascript" charset="utf-8">
+$(function(){addToCart(
+{url:'{.add = /shop/add/}',text:'{.add_text = в корзине}',title:'{.add_title = Товар находится в корзине}',style:'{.add_style = cart-in}',icon:'{.add_icon = ok}'},
+{name:'{.cart = cart_informer}',url:'{.cart_url = /cart/}',text:'{.cart_text = Корзина}',title:'{.cart_title = Корзина покупок}',icon:'{.cart_icon = shopping-cart font24 c-red}',style:'{.cart_sup = c-teal}'},'{.ajax = ajax}'
+);});
+</script>
+<!-- ~AddToCart -->
+
+<!--  WebgateUseAsPoster -->
+<script type="text/javascript" charset="utf-8">
+$(function(){
+	controlUseAsPoster({
+		box:         '{.box = div.text}',
+		use:         '{.used }',
+		add:         '{.add }',
+		edit:        '{.edit }',
+		style:       '{.style = i-picture}',
+		add_text:    '{.add_text = Создать постер для страницы из этого изображения:}',
+		edit_text:   '{.edit_text = Заменить изображение постера страницы на это:}',
+		extra_class: '{.extra = thumb}'
+	});
+});
+</script>
+<!-- ~WebgateUseAsPoster -->
+
+
+<!--  KLADR -->
+
+<!--  KladrJQ -->
+<script type="text/javascript" src="{ %rel }{ %script }kladr.js" charset="utf-8"></script>
+<!-- ~KladrJQ -->
+
+
+<!--  KladrSelection -->
+<script type="text/javascript" charset="utf-8">
+$(function(){
+	selectKLADR({
+		start:{.start = -1},len:{.len = 1},url:'{.url = /kladr/selection.php}',home:'{.home = /}',raw:{.raw = 0},
+		C_POINT:'{.class_point = point}',C_STREET:'{.class_street = street}',C_HOUSE:'{.class_house = house}',
+		E_POINT:'{.event_point = point}',E_STREET:'{.event_street = street}',E_HOUSE:'{.event_house = house}',
+		E_PID:'{.event_point_id = pid}',E_SID:'{.event_street_id = sid}',
+		F_POINT:'{.field_point = f04}',F_STREET:'{.field_street = f05}',F_HOUSE:'{.field_house = f06}',
+		H_POINT:'{.hidden_point = f01}',H_STREET:'{.hidden_street = f02}',H_HOUSE:'{.hidden_house = f03}'
+	});
+});
+</script>
+<!-- ~KladrSelection -->
+
+
+<!--  FORMS -->
+
+<!--  CaptchaJQ --><script type="text/javascript" charset="utf-8">
+$(function(){
+	$("a.captcha").click(function(){
+		$("img.captcha").attr("src", "{.uri }&replay=" + (Math.floor(Math.random() * 1000000) + 1));
+	}).attr("href", "javascript:void(0);");
+});
+</script>
+<!-- ~CaptchaJQ -->
+
+<!--  Datepicker -->
+<script type="text/javascript" charset="utf-8">
+jQuery(function($){
+	$.datepicker.regional['ru'] = {
+		closeText: 'Закрыть',
+		prevText: '&#x3c;Пред',
+		nextText: 'След&#x3e;',
+		currentText: 'Сегодня',
+		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+		dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+		dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+		weekHeader: 'Не',
+		dateFormat: 'yy.mm.dd',
+		firstDay: 1,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: ''};
+	$.datepicker.setDefaults($.datepicker.regional['ru']);
+});
+$(function() {
+	$("#{.name }").datepicker({
+		minDate: "{.mindate = +1}",
+		//<!--  MaxDate -->
+		maxDate: "{.maxdate = 0}",
+		//<!-- ~MaxDate -->
+	});
+});
+</script>
+<!-- ~Datepicker -->
+
+<!--  SHOP  -->
+
+<!--  AddToShoppingCart --><script type="text/javascript" charset="utf-8">
+$(function() {
+	$("a.captcha").click(function()	{
+		$("img.captcha").attr("src", "{ %index }?{.delegate_name }={.delegate_value }&replay=" + (Math.floor(Math.random() * 1000000) + 1));
+	}).attr("href", "javascript:void(0);");
+});
+</script>
+<!-- ~AddToShoppingCart -->
+
+
+<!--  EmptySelector -->
+<script type="text/javascript" charset="utf-8">
+(function($){$.fn.emptySelect=function(){return this.each(function(){if(this.tagName=='select') this.options.length=0;});}})(jQuery);
+</script>
+<!-- ~EmptySelector -->
+
+
+
+<!--  EventSelector -->
+<script type="text/javascript" charset="utf-8">
+$(function() {
+$('#{.number }').change(function() {
+var number = $('#{.number }').val();
+var events = $('#{.event }');
+if (0 == number) { events.attr("disabled", true); events.emptySelect(); } else { events.load('{.uri }',
+{{.delegate_name }:{.delegate_value }, {.delegate_event }:number},
+function(data) { if ('' == data) { events.attr("disabled", true); events.emptySelect();
+} else { events.attr("disabled", false); events.html(data);}});}})});
+</script>
+<!--  ~EventSelector -->
+
+
+<!--  EventSelector3 -->
+<script type="text/javascript" charset="utf-8">
+$(function() {
+$('#{.number }').change(function() {
+var number = $('#{.number }').val();
+var events = $('#{.event }');
+if (0 == number) { events.attr("disabled", true); events.emptySelect(); } else { events.load('{ %gate }',
+{{ %target }:{ %id }, {.delegate_name }:{.delegate_value }, {.delegate_event }:number},
+function(data) { if ('' == data) { events.attr("disabled", true); events.emptySelect();
+} else { events.attr("disabled", false); events.html(data);}});}})});
+</script>
+<!--  ~EventSelector3 -->
+
+
+<!--  EmptySelector2 -->
+<script type="text/javascript" charset="utf-8">
+(function($) {
+	$.fn.emptySelect=function() {
+		return this.each(function() {
+			if(this.tagName=='select') this.options.length=0;
+		});
+	}
+})(jQuery);
+</script>
+<!-- ~EmptySelector2 -->
+
+<!--  EventSelector2 -->
+<script type="text/javascript" charset="utf-8">
+$(function() {
+$('#{.number }').change(
+	function() {
+		var number = $('#{.number }').val();
+		var events = $('#{.event }');
+		if (0 == number) {
+			events.attr("disabled", true);
+			events.emptySelect();
+		}
+		else {
+			events.load(
+				'{ %gate }',
+				{{ %target }:{ %id }, {.delegate_name }:{.delegate_value }, {.delegate_event }:number},
+				function(data) {
+					if ('' == data) {
+						events.attr("disabled", true);
+						events.emptySelect();
+					}
+					else {
+						events.attr("disabled", false);
+						events.html(data);
+					}
+				}
+			);
+		}
+	}
+)});
+</script>
+<!--  ~EventSelector2 -->
