@@ -1,0 +1,20 @@
+{
+    "name": "citron/snippets",
+    "version": "1.0.0",
+    "type": "library",
+    "description": "Snippets for Citron.",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/dlsrc/citron-snippets"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Dmitry Lebedev",
+            "email": "dl@adios.ru",
+            "role": "Developer"
+        }
+    ]
+}
